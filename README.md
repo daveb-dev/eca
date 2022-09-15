@@ -66,7 +66,7 @@ Tensor is an array with dimensionality more than 2. Because of the curse of dime
 
 ## Arithmetic of Large Matrices
 ### 10. Fast Multipole Methods
-Fast multipole method (FMM) is an efficient way to compute the matrix-vector multiplication in $O(n)$ or $O(n\log(n))$ with a bounded error for a particular structured dense $n\times n$ matrix $\Phi$. Such matrices arising out of the $n$-body problem are usually separable of order k，i.e., $\Phi\approx AB$, where $A$ and $B$ are $n\times k$ matrix and $k\times n$ matrix respectively. The matrix-vector multiplication is approximately equvilent to perform $A(Bx)$. Because $k$ is usually $O(1)$ or $O(\log(n))$, the computaional complexity is reduced dramatically. Besides, one of the distinct advantages of the FMM is its rigorous error estimates. 
+The fast multipole method (FMM) is an efficient way to compute the matrix-vector multiplication in $O(n)$ or $O(n\log(n))$ with a bounded error for a particular structured dense $n\times n$ matrix $\Phi$. Such matrices arising out of the $n$-body problem are usually separable of order k，i.e., $\Phi\approx AB$, where $A$ and $B$ are $n\times k$ matrix and $k\times n$ matrix respectively. The matrix-vector multiplication is approximately equvilent to perform $A(Bx)$. Because $k$ is usually $O(1)$ or $O(\log(n))$, the computaional complexity is reduced dramatically. Besides, one of the distinct advantages of the FMM is its rigorous error estimates. 
 ### References:
 * L. Greengard and V. Rokhlin. A Fast Algorithm for Particle Simulations.
 
@@ -79,17 +79,18 @@ In many applications it is useful to sort a vector of length $n$, for example th
 
 ## Linear Programming
 ### 12. Simplex Method for Linear Programming
-A linear program is a problem of finding the optimal solution such that the target function can achieve the largest or smallest under some linear constraints. Simplex method was invented by George Dantzig for solving the linear program by hand in 1940s. It is based on the observation that the optimal solution would exit on the corner or boundary of the graph defined by the contrains. In the standard simplex method, one needs to convert the linear problem to a standard form introducing slack variables when needed. Finally, using simplex tableau and pivot operations, the optimal solution can be found. 
+A linear program is a problem of finding the optimal solution such that the target function can achieve the largest or smallest under some linear constraints. The simplex method was invented by George Dantzig for solving the linear program by hand in 1940s. It is based on the observation that the optimal solution would exit on the corner or boundary of the graph defined by the contrains. In the standard simplex method, one needs to convert the linear problem to a standard form introducing slack variables when needed. Finally, the optimal solution can be found using simplex tableau and pivot operations. 
 ### References:
 * K. Murty. Linear programming.
+
 ## Neural Network
 ### 13. Gradient Descent and Stochastic Gradient Descent
-Gradient descent is a first order optimization method, which is based on the fact that function value decreases fastest along the opposite direction of its gradient. In spite of its simplicity, it is successfully used to train various neural networks, e.g., fully connected neural networks, Convolutional neural network, and Recurrent neural network. Their gradients are computed by the so-called backpropagation algorithm. In order to speed up the convergence process, there are many variants of gradient descent invented, for example, batch gradient descent, stochastic gradient descent, and Adam algorithm.
+The gradient descent is a first order optimization method, which is based on the fact that function value decreases fastest along the opposite direction of its gradient. In spite of its simplicity, it is successfully used to train various neural networks, e.g., fully connected neural networks, convolutional neural network, and recurrent neural network. Their gradients are computed by the so-called backpropagation algorithm. In order to speed up the convergence process, there are many variants of gradient descent invented, for example, batch gradient descent, stochastic gradient descent, and Adam algorithm.
 ### References:
-* I. Goodfellow, Y. Bengio, and A. Courville. Deep Learning
+* I. Goodfellow, Y. Bengio, and A. Courville. Deep Learning.
 ## Signal processing
 ### 14. Fast Fourier Transform
-Convolution is commonly used in the computer vision as a shift equivariant operator. The convolution $w\circledast v$ can be computed either as the multiplication of the circulant matrix derived from the weight vector $w$ and the signal vector $v$, or in the Fourier basis by first computing the element-wise product of their Fourier transforms, and then coming back to the original coordinates via the inverse Fourier transform. Fast Fourier Transform (FFT) was invented to bring down the complexity to $O(n\log(n))$. The algorithm was reinvented by J. W. Cooley and J. Tukey independently 160 years later than the first discovery by Carl Friedrich Gauss.
+Convolution is commonly used in the computer vision as a shift equivariant operator. The convolution $\boldsymbol{w}\circledast \boldsymbol{v}$ can be computed either as the multiplication of the circulant matrix derived from the weight vector $\boldsymbol{w}$ and the signal vector $\boldsymbol{v}$, or in the Fourier basis by first computing the element-wise product of their Fourier transforms, and then coming back to the original coordinates via the inverse Fourier transform. The fast Fourier transform (FFT) was invented to bring down the complexity to $O(n\log(n))$. The algorithm was reinvented by J. W. Cooley and J. Tukey independently 160 years later than the first discovery by Carl Friedrich Gauss.
 ### References:
 * J. W. Cooley and J. Tukey. An algorithm for the machine calculation of complex Fourier series.
 
@@ -100,20 +101,20 @@ Wavelet transform has been used in many fields, primarily for signal processing 
 
 ## Graph
 ### 16. Nested Dissection
-Cholesky algorithm is a direct method for solving any symmetric positive definite system $Ax=b$, which is a modified version of Gaussian elimination. However, the resulting lower triangular matrix $L$ could be potentially dense due to newly added non-zero fill-ins, which would increases the amount of storage and computation. The amount of fill-ins depends on order in which variables are eliminated. The nested dissection is one way to obtain a good order based on graph model. One can think of the sparse matrix as a connectivity matrix and therefore build a graph. Then, the graph can be recursively splited into pieces using proper separators, and finally numbering the nodes in separators last. Such heuristic limit the number of the fill-ins effectively.
+Cholesky algorithm is a direct method for solving any symmetric positive definite system $Ax=b$, which is a modified version of Gaussian elimination. However, the resulting lower triangular matrix $L$ could be potentially dense due to newly added non-zero fill-ins, which would increases the amount of storage and computation. The amount of fill-ins depends on order in which variables are eliminated. The nested dissection is one way to obtain a good order based on graph model. One can think of the sparse matrix as a connectivity matrix and therefore build a graph. Then, the graph can be recursively splited into pieces using proper separators, and we finally numbering the nodes in separators last. Such heuristic limit the number of the fill-ins effectively.
 ### References:
 * A. George. Nested Dissection of a Regular Finite Element Mesh.
 
 ### 17. Spectral Clustering
-Graph partitioning is heavily used in domain decomposition and social community detection. If the considering graph is in a coordinate system, there exist simpler methods, for example, recursive coordinate bisection and inertial partitioning. However, these methods totally fail for hypergraphs. This is why spectral clustering method comes in which also work for general graphs without nodal coordinate. This method is inspired by vibrating string. The label of node is determined by the sign of the corresponding element in the second smallest eigenvector of the graph Laplacian matrix (also called Fiedler eigenvector). 
+Graph partitioning is heavily used in domain decomposition and social community detection. If the considering graph is in a coordinate system, there exist simpler methods, for example recursive coordinate bisection and inertial partitioning. However, these methods totally fail for hypergraphs. This is why spectral clustering method comes in which also work for general graphs without nodal coordinate. This method is inspired by vibrating string. The label of node is determined by the sign of the corresponding element in the second smallest eigenvector of the graph Laplacian matrix (also called Fiedler eigenvector). 
 ### References:
-* M. Fiedler. Algebraic connectivity of graphs
+* M. Fiedler. Algebraic connectivity of graphs.
 * A. Pothen, H. D. Simon, and K. Liou. Partitioning sparse matrices with eigenvectors of graphs.
 ## Simulation 
 ### 18. Monte Carlo Method
-Monte Carlo method is a method for sampling from a random variable or a stochastic process and compute further quantities of interests. Such simulation method is quite useful especially when no exact analytic method or even finite numerical algorithm is available. The foundamental of the sampling on computers is random number generation. Unfortunately, most computers can only generate pseudo-random numbers using PRNGs algorithm which is determined by a seed. For a given random variable one can sample from its distributions with the inverse transform method. For a given stochastic processes, e.g., Markov chain or Brown motion, one can employ the Metropolis-Hastings algorithm. In applications, the Monte Carlo method is heavily used to simulate queuing systems seen as markov chain, and stock price in finacial market seen as Browm motion. 
+The Monte Carlo method is a method for sampling from a random variable or a stochastic process and computing further quantities of interests. Such simulation method is quite useful especially when no exact analytic method or even finite numerical algorithm is available. The foundamental of the sampling on computers is random number generation. Unfortunately, most computers can only generate pseudo-random numbers using PRNGs algorithm which is determined by a seed. For a given random variable one can sample from its distributions with the inverse transform method. For a given stochastic processes, e.g., Markov chain or Brown motion, one can employ the Metropolis-Hastings algorithm. In applications, the Monte Carlo method is heavily used to simulate queuing systems seen as markov chain, and stock price movement seen as geometric Brownian motion.
 ### References:
-* M. L. Rizzo. Statistical Computing with R
+* M. L. Rizzo. Statistical Computing with R.
 
 ## Topology 
 ### 19. Discrete Morse Theory
@@ -121,6 +122,6 @@ Monte Carlo method is a method for sampling from a random variable or a stochast
 ### 20. Integer Relation Detection
 Find a non-zero vector of integer $(a_1,\cdots,a_n)$ such that 
 $$a_1x_1+a_2x_2+\cdots+a_nx_n = 0,$$
-where $x=(x_1,\cdots,x_n)$ is a vector of real or complex numbers. Such problem is well known as integer relation detection. If $n=2$, it could be solved by the Euclidean algorithm. The problem with larger $n$ was firstly solved by Helaman Ferguson and Rodney Forcade in 1977. Despite the simplicity of the mathematical representation of this problem, it is widely used to find new interesting patterns in number theory, quantum field theory and chaos theory. Don't you want to use this simple but powerful tool to discovery new principles of nature?
+where $x=(x_1,\cdots,x_n)$ is a vector of real or complex numbers. Such problem is well known as integer relation detection. If $n=2$, it could be solved by the Euclidean algorithm. The problem with larger $n$ was firstly solved by Helaman Ferguson and Rodney Forcade in 1977. Despite the simplicity of the mathematical representation of this problem, it is widely used to find new interesting patterns in number theory, quantum field theory, and chaos theory. Don't you want to use this simple but powerful tool to discovery new principles of nature?
 ### References:
 * D. H. Bailey. Integer Relation Detection.
