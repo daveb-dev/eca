@@ -12,38 +12,38 @@ Materials:
 
 ## Eigenvalue problem of large scale linear systems 
 ### 1. Krylov Subspace Iteration Methods
-Important methods for the numerical solution of eigenvalue problems and systems of linear equations, such as the Lanczos or the CG method are based on the projection onto a Krylov subspace. Given a matrix $A\in\mathbb{R}^{n\times n}$ and a vector $v\in \mathbb{R}^n, n\in N$, the Krylov space is defined according to $\mathcal{K}_m(A,v):=\{v,Av,\cdots,A^{m-1}v\}$. Of particular interest are the approximation properties of these subspaces and the relation between them.
+Important methods for the numerical solution of eigenvalue problems and systems of linear equations, such as the Lanczos or the CG method are based on the projection onto a Krylov subspace. Given a matrix $A\in\mathbb{R}^{n\times n}$ and a vector $\boldsymbol{v}\in \mathbb{R}^n, n\in N$, the Krylov space is defined according to $\mathcal{K}_m(A,\boldsymbol{v}):=\{\boldsymbol{v},Av,\cdots,A^{m-1}\boldsymbol{v}\}$. Of particular interest are the approximation properties of these subspaces and the relation between them.
 ### References:
 * Y. Saad. Numerical methods for large eigenvalue problem.
 * G. H. Golub and C. F. van Loan. Matrix Computation.
 ### 2. QR Algorithm for Computing Eigenvalues
-The QR algorithm is one of the most popular iterative methods for computing eigenvalues of general matrices $A$. We repeatedly update the matrix $A$ with the product $RQ$, where $Q$ and $R$ are obtained by the QR decomposition of the matrix at previous step. As the iteration goes, it will eventually converge to an upper triangular matrix of which the diagonal is the eigenvalue vector of the original matrix $A$. Due to the large time complexity of the classical QR algorithm, the shift QR algorithm with Hessenberg reduction is more often used in practice.
+The QR algorithm is one of the most popular iterative methods for computing eigenvalues of general matrices $A$. We initialize $B$ with $A$ and then repeatedly update the matrix $B$ with the product $RQ$, where $Q$ and $R$ are obtained by the QR decomposition of $B$ at the previous step. As the iteration goes, it will eventually converge to an upper triangular matrix of which the diagonal is the eigenvalue vector of the original matrix $A$. Due to the large time complexity of the classical QR algorithm, the shift QR algorithm with Hessenberg reduction is more often used in practice.
 ### References:
 * J. G. F. Francis. The QR Transformation—Part 1 and Part 2.
 * G. H. Golub and C. F. van Loan. Matrix Computation.
 ## Low-rank approximation
 ### 3. Singular value decomposition (SVD)
 The SVD of an $n\times m$ matrix $A$ of rank $r$ is the decomposition into a product of three matrices
-$$A = U\Sigma V^T.$$
-Where $U$ is a unitary $n\times n$ matrix, $V$ is the adjoint of a unitary $m\times m$ matrix, and $\Sigma$ is a $n\times m$ matrix in the form 
+$$A = U\Sigma V^T,$$
+where $U$ is a unitary $n\times n$ matrix, $V$ is the adjoint of a unitary $m\times m$ matrix, and $\Sigma$ is a $n\times m$ matrix in the form 
 $$\Sigma = [D,\boldsymbol{0};\boldsymbol{0},\boldsymbol{0}].$$
-The $r\times r$ matrix $D$ is a diagonal matrix and its diagonal entries are $\sigma_1,\cdots,\sigma_r$ are called singularnvalues. In particular, $\sigma_1\geq\sigma_2\geq\cdots\geq\sigma_r.$ With the help of the SVD, it is possible to calculate both in the spectral norm as well as in the Frobenius norm the best rank-k approximation to $A$.
+The $r\times r$ matrix $D$ is a diagonal matrix and its diagonal entries are $\sigma_1,\cdots,\sigma_r$ called singularnvalues. In particular, $\sigma_1\geq\sigma_2\geq\cdots\geq\sigma_r.$ With the help of the SVD, it is possible to calculate both in the spectral norm as well as in the Frobenius norm the best rank-k approximation to $A$.
 ### References:
 * C. Eckart and G. Young. The approximation of one matrix by another of lower rank.
 ### 4. Pivoted Cholesky Decomposition
-The pivoted Cholesky decomposition is an extremely efficient algorithm to determine a low rank approximation of a symmetric, positive semidefinite matrix.  To obtain an approximation of a matrix,  only the diagonal and $m$ columns of the underlying matrix need to be computed. Therefore, the method seems appealing especially for fully populated matrices. In particular, a rigorous posteriori error control is available in the trace norm, so that the method always yields a reliiable approximation.
+The pivoted Cholesky decomposition is an extremely efficient algorithm to determine a low rank approximation of a symmetric, positive semidefinite matrix.  To obtain an approximation of a matrix,  only the diagonal and $m$ columns of the underlying matrix need to be computed. Therefore, the method seems appealing especially for fully populated matrices. In particular, a rigorous posteriori error control is available in the trace norm, so that the method always yields a reliable approximation.
 ### References:
 * H. Harbrecht, M. Multerer, and R. Schneider. On the low-rank approximation by the pivoted Cholesky decomposition.
 
 ### 5. Randomized Low-rank Approximation
 A very simple class of low rank approximation of a matrix is obtained by using the product of the matrix and random vectors. A low rank approximation can be obtained from the resulting random vectors in the image of the matrix. Since the main effort of these methods is dominated by the matrix-vector multiplications, these algorithms are usually very fast. In return, however, only pessimistic error estimates are avaliable, and the actual error is often much better.
 ### References:
-* N Halko, PG Martinsson, JA Tropp. Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions.
+* N. Halko, P. G. Martinsson, J. A. Tropp. Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions.
 
 ### 6. Hierarchical Matrices
 Hierarchical matrices are special matrices $\mathcal{H}\in \mathbb{R}^{n\times n}$, which have blockwise low rank $k \ll n$ with respect to a special tree-like partitioning $\tau$, the so-called "Block Cluster Tree". A special challenge is posed by the arithmetic of these matrices, for example the addition and multiplication. In the addition, the rank per matrix block can double and must be recompressed accordingly. For the multiplication of hierarchical matrices with even the same block structure, matrix blocks of different sizes can be combined.
 ### References:
-* S. Börm, L. Grasedyck, W. Hackbusch.Hierarchical Matrices.
+* S. Börm, L. Grasedyck, W. Hackbusch. Hierarchical Matrices.
 * W. Hackbusch. A sparse matrix arithmetic based on on H-Matrices. Part I: Introduction to H-Matrices.
 
 ### 7. Adaptive cross approximation
@@ -60,13 +60,13 @@ Suppose to achieve a required accuracy, we need to employ at least N grid points
 * https://sparsegrids.org
 
 ### 9. Tensor-train Decomposition
-Tensor is an array with dimensionality more than 2. Because the curse of dimensionality challenges are posed by the storage of high dimensional tensors and the implementation of their arithmetic operations. Tensor-train decomposition is one possible solution, considered as an extension of low rank approximation of matrices. In this method, one can unfold a tensor recursively by spliting indices into two parts at each step, and perform any low rank approximation on the resulting 2D matrices. Such way the tensor could be written in a so-called TT-format. If the low rank $k$ is samll, the storage will decrease from $O(n^d)$ to $O(dnk^2)$. The complexity of the arithmetic operations reduce dramatically as well, e.g., addition, element-wise production.
+Tensor is an array with dimensionality more than 2. Because of the curse of dimensionality, challenges are posed by the storage of high dimensional tensors and the implementation of their arithmetic operations. Tensor-train decomposition is one possible solution, considered as an extension of low rank approximation of matrices. In this method, one can unfold a tensor recursively by spliting indices into two parts at each step, and perform any low rank approximation on the resulting 2D matrices. Such way the tensor could be written in a so-called TT-format. If the low rank $k$ is small, the storage will decrease from $O(n^d)$ to $O(dnk^2)$. The complexity of the arithmetic operations reduce dramatically as well, e.g., addition, element-wise production.
 ### References:
 * I. V. Oseledets. Tensor-Train Decomposition
 
 ## Arithmetic of Large Matrices
 ### 10. Fast Multipole Methods
-Fast multipole method (FMM) is an efficient way to compute the matrix-vector multiplication in $O(n)$ or $O(n\log(n))$ with a bounded error for a particular structured dense $n\times n$ matrix $\Phi$. Such matrices arising out of the $n$-body problem are usually separable of order k，i.e., $\Phi\approx AB$, where $A$ and $B$ are $n\times k$ matrix and $k\times n$ matrix respectively. The matrix-vector multiplication is almost equvilent to perform $A(Bx)$. Because $k$ is usually $O(1)$ or $O(\log(n))$, the computaional complexity is reduced dramatically. Besides, one of the distinct advantages of the FMM is its rigorous error estimates. 
+Fast multipole method (FMM) is an efficient way to compute the matrix-vector multiplication in $O(n)$ or $O(n\log(n))$ with a bounded error for a particular structured dense $n\times n$ matrix $\Phi$. Such matrices arising out of the $n$-body problem are usually separable of order k，i.e., $\Phi\approx AB$, where $A$ and $B$ are $n\times k$ matrix and $k\times n$ matrix respectively. The matrix-vector multiplication is approximately equvilent to perform $A(Bx)$. Because $k$ is usually $O(1)$ or $O(\log(n))$, the computaional complexity is reduced dramatically. Besides, one of the distinct advantages of the FMM is its rigorous error estimates. 
 ### References:
 * L. Greengard and V. Rokhlin. A Fast Algorithm for Particle Simulations.
 
