@@ -1,10 +1,13 @@
 # Efficient Computational Algorithms SA 2022-2023
 Michael Multerer, Wei Huang, and Davide Baroli.
 
+
+
 Materials:
 
 * B. A. Cipra. The Best of the 20th Century: Editors Name Top 10 Algorithms.
 * H. Harbrecht and M. Multerer. Algorithmische Mathematik (in German :-)).
+
 
 <p align="center">
   <img width="700" height="300" src="https://github.com/weiwongg/eca/blob/main/running-cheetah.jpg">
@@ -167,3 +170,16 @@ Tensor is an array with dimensionality more than 2. Because of the curse of dime
 * I. V. Oseledets. Tensor-Train Decomposition.
 
 ## 22. PINN (Supervisor: Davide)
+
+
+
+Programming Languages for code
+
+<p align="center">
+  <img width="300" height="300" src="https://github.com/weiwongg/eca/blob/main/images/python_logo.jpg">
+  <img width="300" height="300" src="https://github.com/weiwongg/eca/blob/main/images/cpp_logo.jpg">
+</p>
+
+
+
+
