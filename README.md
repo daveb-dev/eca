@@ -15,6 +15,7 @@ https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=17639&punumber=5992).
 <p align="center">
 <img src="https://github.com/EfficientComputationalAlgorithms/eca/blob/main/images/hmatrix.jpeg" width=60% height=60%></img>
 </p>
+
 ## 1. Sorting Algorithms (Supervisor: Michael)
 In many applications it is useful to sort an array of length $n$. A simple algorithm to sort a vector is the bubblesort algorithm,
 which pairwise compares and swaps the elements of the array. Although this algorithm is quite simple, it is often unsuitable in
