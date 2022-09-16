@@ -16,7 +16,7 @@ on:
 
 jobs:
   convert_via_pandoc:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - name: create file list
@@ -27,7 +27,7 @@ jobs:
           echo "::set-output name=files::$(printf '"%s" ' *.md)"
       - uses: docker://pandoc/latex:2.9
         with:
-          args: --latex-engine=xelatex --output=output/result.pdf ${{ steps.files_list.outputs.files }} --variable mainfont=Georgia
+          args: --pdf-engine=xelatex --output=output/result.pdf ${{ steps.files_list.outputs.files }}
       - uses: actions/upload-artifact@master
         with:
           name: output
