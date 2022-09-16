@@ -13,14 +13,18 @@ Materials:
 ## Eigenvalue problem of large scale linear systems 
 ### 1. Krylov Subspace Iteration Methods
 Important methods for the numerical solution of eigenvalue problems and systems of linear equations, such as the Lanczos or the CG method are based on the projection onto a Krylov subspace. Given a matrix $A\in\mathbb{R}^{n\times n}$ and a vector $\boldsymbol{v}\in \mathbb{R}^n, n\in N$, the Krylov space is defined according to $\mathcal{K}_m(A,\boldsymbol{v}):=\{\boldsymbol{v},Av,\cdots,A^{m-1}\boldsymbol{v}\}$. Of particular interest are the approximation properties of these subspaces and the relation between them.
+
 ### References:
 * Y. Saad. Numerical methods for large eigenvalue problem.
 * G. H. Golub and C. F. van Loan. Matrix Computation.
+
 ### 2. QR Algorithm for Computing Eigenvalues
 The QR algorithm is one of the most popular iterative methods for computing eigenvalues of general matrices $A$. We initialize $B$ with $A$ and then repeatedly update the matrix $B$ with the product $RQ$, where $Q$ and $R$ are obtained by the QR decomposition of $B$ at the previous step. As the iteration goes, it will eventually converge to an upper triangular matrix of which the diagonal is the eigenvalue vector of the original matrix $A$. Due to the large time complexity of the classical QR algorithm, the shift QR algorithm with Hessenberg reduction is more often used in practice.
+
 ### References:
 * J. G. F. Francis. The QR Transformation—Part 1 and Part 2.
 * G. H. Golub and C. F. van Loan. Matrix Computation.
+
 ## Low-rank approximation
 ### 3. Singular value decomposition (SVD)
 The SVD of an $n\times m$ matrix $A$ of rank $r$ is the decomposition into a product of three matrices
@@ -28,15 +32,19 @@ $$A = U\Sigma V^T,$$
 where $U$ is a unitary $n\times n$ matrix, $V$ is the adjoint of a unitary $m\times m$ matrix, and $\Sigma$ is a $n\times m$ matrix in the form 
 $$\Sigma = [D,\boldsymbol{0};\boldsymbol{0},\boldsymbol{0}].$$
 The $r\times r$ matrix $D$ is a diagonal matrix and its diagonal entries are $\sigma_1,\cdots,\sigma_r$ called singularnvalues. In particular, $\sigma_1\geq\sigma_2\geq\cdots\geq\sigma_r.$ With the help of the SVD, it is possible to calculate both in the spectral norm as well as in the Frobenius norm the best rank-k approximation to $A$.
+
 ### References:
 * C. Eckart and G. Young. The approximation of one matrix by another of lower rank.
+
 ### 4. Pivoted Cholesky Decomposition
 The pivoted Cholesky decomposition is an extremely efficient algorithm to determine a low rank approximation of a symmetric, positive semidefinite matrix.  To obtain an approximation of a matrix,  only the diagonal and $m$ columns of the underlying matrix need to be computed. Therefore, the method seems appealing especially for fully populated matrices. In particular, a rigorous posteriori error control is available in the trace norm, so that the method always yields a reliable approximation.
+
 ### References:
 * H. Harbrecht, M. Multerer, and R. Schneider. On the low-rank approximation by the pivoted Cholesky decomposition.
 
 ### 5. Randomized Low-rank Approximation
 A very simple class of low rank approximation of a matrix is obtained by using the product of the matrix and random vectors. A low rank approximation can be obtained from the resulting random vectors in the image of the matrix. Since the main effort of these methods is dominated by the matrix-vector multiplications, these algorithms are usually very fast. In return, however, only pessimistic error estimates are avaliable, and the actual error is often much better.
+
 ### References:
 * N. Halko, P. G. Martinsson, J. A. Tropp. Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions.
 
