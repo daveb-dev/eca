@@ -12,9 +12,6 @@ https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=17639&punumber=5992).
 * G. H. Golub, C. F. Van Loan. Matrix Computations.
 * H. Harbrecht and M. Multerer. Algorithmische Mathematik (in German).
 ##
-<p align="center">
-  <img width="700" height="300" src="https://github.com/EfficientComputationAlgorithm/eca/blob/main/images/running-cheetah.jpg">
-</p>
 
 ## 1. Sorting Algorithms (Supervisor: Michael)
 In many applications it is useful to sort an array of length $n$. A simple algorithm to sort a vector is the bubblesort algorithm,
@@ -90,27 +87,36 @@ Adam algorithm.
 
 ### References:
 
-* R. S. Sutton. Two problems with backpropagation and other steepest-descent learning
-procedures for networks.
-* Y. LeCun, L. Bottou, G. B. Orr, and K. R. Müller. Efficient BackProp.
-* I. Goodfellow, Y. Bengio, and A. Courville. Deep Learning.
+* I. Goodfellow, Y. Bengio, and A. Courville. Deep  Learning.
 
 ## 8. Monte Carlo Method (Supervisor: Davide)
-The Monte Carlo method is a method for sampling from a random variable or a stochastic process and computing further quantities of interests. Such simulation method is quite useful especially when no exact analytic method or even finite numerical algorithm is available. The foundamental of the sampling on computers is random number generation. Unfortunately, most computers can only generate pseudo-random numbers using PRNGs algorithm which is determined by a seed. For a given random variable one can sample from its distributions with the inverse transform method. For a given stochastic processes, e.g., Markov chain or Brown motion, one can employ the Metropolis-Hastings algorithm. In applications, the Monte Carlo method is heavily used to simulate queuing systems seen as markov chain, and stock price movement seen as geometric Brownian motion.
+The Monte Carlo method is a method for computing high dimensional integrals based on random sampling.
+The basis of sampling on computers is random number generation. Unfortunately, most computers can only
+generate pseudo-random numbers using a PRNG which has to be initialized by a seed. For a given random
+variable one can sample from its distributions with the inverse transform method. Another approach
+to sample from distributions, which cannot be sampled this way, is the
+Metropolis-Hastings algorithm, which computes the stationary distribution of a Markov chain. 
 
 ### References:
 
 * M. L. Rizzo. Statistical Computing with R.
+* O. Häggström. Finite Markov Chains and Algorithmic Applications
 
 ## 9. Multilevel Monte Carlo method (Supervisor: Davide)
-The Monte Carlo is one of the most common approaches of approximating the expectation of a random variable $X(\omega)$. From the weak law of large numbers theorem, the required number of samples depends on the variance for a given accuracy to achieve. If the variance is small, the Monte Carlo method even with few samples can be of high accuracy. One of the classic methods of variance reduction involves a telescoping sum called multilevel Monte Carlo method. By computing relatively few samples at the hight level, but lots of samples at the coarse level, we substaintially save in terms of the total computation.
+The Monte Carlo is one of the most common approaches for approximating the expectation of a random variable $X(\omega)$.
+From the weak law of large numbers theorem, the required number of samples depends on the variance for a given accuracy to achieve.
+If the variance is small, the Monte Carlo method even with few samples can be of high accuracy.
+One of the classic methods for variance reduction involves a hierarchy of control variates and is called
+multilevel Monte Carlo method. By computing relatively few samples at the high level of the hierarchy,
+but lots of samples at the coarse level, we substaintially save in terms of the total computation.
 
 ### References:
 
+* S. Heinrich. Multilevel Monte Carlo Methods
 * M. B. Giles. Multilevel Monte Carlo Path Simulation.
 
 ## 10. Krylov Subspace Iteration Methods (Supervisor: Michael)
-Important methods for the numerical solution of eigenvalue problems and systems of linear equations, such as the Lanczos or the CG method are based on the projection onto a Krylov subspace. Given a matrix $A\in\mathbb{R}^{n\times n}$ and a vector $\boldsymbol{v}\in \mathbb{R}^n, n\in N$, the Krylov space is defined according to $\mathcal{K}_m(A,\boldsymbol{v}):=\{\boldsymbol{v},Av,\cdots,A^{m-1}\boldsymbol{v}\}$. Of particular interest are the approximation properties of these subspaces and the relation between them.
+Important methods for the numerical solution of eigenvalue problems and large systems of linear equations, such as the Lanczos or the CG method are based on the projection onto a Krylov subspace. Given a matrix $A\in\mathbb{R}^{n\times n}$ and a vector $v\in \mathbb{R}^n, n\in N$, the Krylov space is defined according to $\mathcal{K}_m(A,v):=\{v,Av,\cdots,A^{m-1}\boldsymbol{v}\}$. Of particular interest are the approximation properties of these subspaces and the relation between them.
 
 ### References:
 * Y. Saad. Numerical methods for large eigenvalue problem.
@@ -128,13 +134,17 @@ The Singular value decomposition (SVD) of an $n\times m$ matrix $A$ of rank $r$ 
 $$A = U\Sigma V^T,$$
 where $U$ is a unitary $n\times n$ matrix, $V$ is the adjoint of a unitary $m\times m$ matrix, and $\Sigma$ is a $n\times m$ matrix in the form 
 $$\Sigma = [D,\boldsymbol{0};\boldsymbol{0},\boldsymbol{0}].$$
-The $r\times r$ matrix $D$ is a diagonal matrix and its diagonal entries are $\sigma_1,\cdots,\sigma_r$ called singularnvalues. In particular, $\sigma_1\geq\sigma_2\geq\cdots\geq\sigma_r.$ With the help of the SVD, it is possible to calculate both in the spectral norm as well as in the Frobenius norm the best rank-k approximation to $A$.
+The $r\times r$ matrix $D$ is a diagonal matrix and its diagonal entries are $\sigma_1,\cdots,\sigma_r$ called singularnvalues. In particular, $\sigma_1\geq\sigma_2\geq\cdots\geq\sigma_r.$ With the help of the SVD, it is possible to calculate the best rank-k approximation of $A$
+in the spectral norm as well as in the Frobenius norm.
 
 ### References:
 * C. Eckart and G. Young. The approximation of one matrix by another of lower rank.
 
 ## 13. Adaptive Cross Approximation (Supervisor: Michael)
-The adaptive cross approximation is a method for the approximation of asymptotically smooth functions. These are bivariate functions $f(x,y)$ whose derivatives off the diagonal $x=y$ exhibit a certain decay behavior. It can be shown that these functions can be partitioned in such a way that individual low-rank regions can be approximated. The actual algorithm is then based on a partially pivoted Gaussian algorithm with a corresponding adaptivee decay criterion.
+The adaptive cross approximation is a method for the approximation of asymptotically smooth functions.
+These are bivariate functions $f(x,y)$ whose derivatives apart from the diagonal $x=y$ exhibit a certain decay behavior.
+It can be shown that these functions can be partitioned in such a way that individual low-rank regions can be approximated.
+The actual algorithm is then based on a partially pivoted Gaussian algorithm with a corresponding adaptive decay criterion.
 
 ### References:
 
@@ -142,26 +152,27 @@ The adaptive cross approximation is a method for the approximation of asymptotic
 * M. Bebendorf. Hierarchical Matrices.
 
 ## 14. Randomized Low-rank Approximation (Supervisor: Davide)
-A very simple class of low rank approximation of a matrix is obtained by using the product of the matrix and random vectors. A low rank approximation can be obtained from the resulting random vectors in the image of the matrix. Since the main effort of these methods is dominated by the matrix-vector multiplications, these algorithms are usually very fast. In return, however, only pessimistic error estimates are avaliable, and the actual error is often much better.
+A very simple class of low-rank approximations of a matrix is obtained by using the product of the matrix and random vectors. A low-rank approximation can be obtained from the vectors in the image of the matrix. Since the main effort of these methods is dominated by matrix-vector multiplications, these algorithms are usually very fast for sparse matrices. In return, however, only pessimistic error estimates are avaliable, and the actual error is often much better.
 
 ### References:
 * N. Halko, P. G. Martinsson, J. A. Tropp. Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions.
 
 ## 15. Pivoted Cholesky Decomposition (Supervisor: Michael)
-The pivoted Cholesky decomposition is an extremely efficient algorithm to determine a low rank approximation of a symmetric, positive semidefinite matrix.  To obtain an approximation of a matrix,  only the diagonal and $m$ columns of the underlying matrix need to be computed. Therefore, the method seems appealing especially for fully populated matrices. In particular, a rigorous posteriori error control is available in the trace norm, so that the method always yields a reliable approximation.
+The pivoted Cholesky decomposition is an extremely efficient algorithm to determine a low-rank approximation of a symmetric, positive semidefinite matrix.  To obtain an approximation of a matrix,  only the diagonal and $m$ columns of the underlying matrix need to be computed. Therefore, the method seems appealing especially for fully populated matrices. In particular, a rigorous posteriori error control is available in the trace norm, so that the method always yields a reliable approximation.
 
 ### References:
 * H. Harbrecht, M. Multerer, and R. Schneider. On the low-rank approximation by the pivoted Cholesky decomposition.
 
 ## 16. Fast Multipole Methods (Supervisor: Michael)
-The fast multipole method (FMM) is an efficient way to compute the matrix-vector multiplication in $O(n)$ or $O(n\log(n))$ with a bounded error for a particular structured dense $n\times n$ matrix $\Phi$. Such matrices arising out of the $n$-body problem are usually separable of order k，i.e., $\Phi\approx AB$, where $A$ and $B$ are $n\times k$ matrix and $k\times n$ matrix respectively. The matrix-vector multiplication is approximately equvilent to perform $A(Bx)$. Because $k$ is usually $O(1)$ or $O(\log(n))$, the computaional complexity is reduced dramatically. Besides, one of the distinct advantages of the FMM is its rigorous error estimates. 
+The fast multipole method (FMM) is an efficient way to compute the matrix-vector multiplication in $O(n)$ or $O(n\log(n))$ with a bounded error for a particular structured dense $n\times n$ matrix $\Phi$. Such matrices arising out of the $n$-body problem are usually blockwise separable of order k，i.e., $\Phi|_{\tau,\sigma}\approx AB$, where $A$ and $B$ are $n\times k$ matrix and $k\times n$ matrix respectively. Herein,
+$\tau$ and $\sigma$ are suitable index sets. The matrix-vector multiplication for this block is thus approximately equivalent to perform $A(Bx)$. Because $k$ is usually $O(1)$, the computaional cost is reduced dramatically. Besides, one of the distinct advantages of the FMM is its rigorous error estimates. 
 
 ### References:
 
 * L. Greengard and V. Rokhlin. A Fast Algorithm for Particle Simulations.
 
 ## 17. Hierarchical Matrices (Supervisor: Michael)
-Hierarchical matrices are special matrices $\mathcal{H}\in \mathbb{R}^{n\times n}$, which have blockwise low rank $k \ll n$ with respect to a special tree-like partitioning $\tau$, the so-called "Block Cluster Tree". A special challenge is posed by the arithmetic of these matrices, for example the addition and multiplication. In the addition, the rank per matrix block can double and must be recompressed accordingly. For the multiplication of hierarchical matrices with even the same block structure, matrix blocks of different sizes can be combined.
+Hierarchical matrices are special matrices $\mathcal{H}\in \mathbb{R}^{n\times n}$, which have blockwise low-rank $k \ll n$ with respect to a special tree-like partitioning $\tau$, the so-called "Block Cluster Tree". A special challenge is posed by the arithmetic of these matrices, for example the addition and multiplication. In the addition, the rank per matrix block can double and must be recompressed accordingly. For the multiplication of hierarchical matrices with even the same block structure, matrix blocks of different sizes need to be combined.
 
 ### References:
 
@@ -169,46 +180,49 @@ Hierarchical matrices are special matrices $\mathcal{H}\in \mathbb{R}^{n\times n
 * W. Hackbusch. A sparse matrix arithmetic based on on H-Matrices. Part I: Introduction to H-Matrices.
 
 ## 18. Fast Fourier Transform (Supervisor: Wei)
-Convolution is commonly used in the computer vision as a shift equivariant operator. The convolution $\boldsymbol{w}\circledast \boldsymbol{v}$ can be computed either as the multiplication of the circulant matrix derived from the weight vector $\boldsymbol{w}$ and the signal vector $\boldsymbol{v}$, or in the Fourier basis by first computing the element-wise product of their Fourier transforms, and then coming back to the original coordinates via the inverse Fourier transform. The fast Fourier transform (FFT) was invented to bring down the complexity to $O(n\log(n))$. The algorithm was reinvented by J. W. Cooley and J. Tukey independently 160 years later than the first discovery by Carl Friedrich Gauss.
+Convolution is commonly used in computer vision as a shift equivariant operator. The convolution ${w}\star{v}$ can be computed either as the multiplication of the circulant matrix derived from the weight vector ${w}$ and the signal vector ${v}$, or in the Fourier basis by first computing the element-wise product of their Fourier transforms, and then coming back to the original coordinates via the inverse Fourier transform. The fast Fourier transform (FFT) was invented to bring down the cost to $O(n\log(n))$. 
+This cost reduction enabled modern signal processing and is the foundation of the mp3 audio format.
+The algorithm was reinvented by J. W. Cooley and J. Tukey independently 160 years later than the first discovery by Carl Friedrich Gauss.
 
 ### References:
 
 * J. W. Cooley and J. Tukey. An algorithm for the machine calculation of complex Fourier series.
 
 ## 19. Fast Wavelet Transform (Supervisor: Wei)
-Wavelet transform has been used in many fields, primarily for signal processing and, consequently, image analysis as a replacement for Fourier transform and discrete cosine transform, with a notable mention going to the work done in JPEG2K. The fast wavelet transform (FWT) is an algorithm commonly used to apply a discrete wavelet transform onto an $n\times n$ image and decompose it into approximation coefficients using convolutions of filter banks and downsampling operators, with a computational cost in the order of $\mathrm{O}(n^2)$. 
+Similar to the fast Fourier transform, the fast wavelet transform (FWT) computes a change of basis into a wavelet basis. Different from 
+the fast Fourier transform, the FWT can be performed in linear cost with respect to the length of the signal.
+It is used in many fields, primarily for signal processing and, consequently, image analysis as a replacement for Fourier transform and discrete cosine transform, with a notable mention going to the work done in JPEG2K. The FWT can also be applied to decompose and filter images.
 
 ### References:
 
 * S. Mallat. A wavelet tour of signal processing.
 
 ## 20. Sparse Grids (Supervisor: Wei)
-Suppose to achieve a required accuracy, we need to employ at least N grid points in the one-dimensional space. With regular grid-based approaches, a straight forward extension to $d$ dimensions leads to $N^d$ grid points to reach the same accuracy. Therefore, regular grid-based methods exhibit the problem of the exponential dependence of dimensionality, i.e., the curse of dimensionality. The sparse grid method is a numerical discretization based on the hierarchical basis, which can deal with this problem to some extent.
+Suppose to achieve a required accuracy, we need to employ at least $N$ grid points in the one-dimensional space. With regular grid-based approaches, a straight forward extension to $d$ dimensions leads to $N^d$ grid points to reach the same accuracy. Therefore, regular grid-based methods exhibit the problem of the exponential dependence of dimensionality, i.e., the curse of dimensionality. For the approximation of certain classes of functions, sparse grids overcome the curse of dimensionality and lead to efficient representations.
 
 ### References:
 
-* J. Garcke and M. Griebel. Sparse grids and applications.
+* H. J. Bungartz and M. Griebel. Sparse grids.
 * https://sparsegrids.org
 
 ## 21.  Tensor-train Decomposition (Supervisor: Wei)
-Tensor is an array with dimensionality more than 2. Because of the curse of dimensionality, challenges are posed by the storage of high dimensional tensors and the implementation of their arithmetic operations. Tensor-train decomposition is one possible solution, considered as an extension of low rank approximation of matrices. In this method, one can unfold a tensor recursively by spliting indices into two parts at each step, and perform any low rank approximation on the resulting 2D matrices. Such way the tensor could be written in a so-called TT-format. If the low rank $k$ is small, the storage will decrease from $O(n^d)$ to $O(dnk^2)$. The complexity of the arithmetic operations reduce dramatically as well, e.g., addition, element-wise production.
+A tensor is an array with dimensionality more than 2. Because of the curse of dimensionality, challenges are posed by the storage of high-dimensional tensors and the implementation of their arithmetic operations. The tensor-train decomposition is one possible solution, considered as an extension of low rank-approximation of matrices. In this method, one can unfold a tensor recursively by spliting indices into two parts at each step, and perform any low-rank approximation on the resulting 2D matrices. If the low rank $k$ is small, the storage will decrease from $O(n^d)$ to $O(dnk^2)$. The cost of the arithmetic operations reduces dramatically as well, e.g., addition and element-wise multiplication.
 
 ### References:
 
 * I. V. Oseledets. Tensor-Train Decomposition.
 
 ## 22. Deep Learning Neural Operator  (Supervisor: Davide)
-Neural operators is new paradigm for data-driven prediction of proof-of-concept simulation in engineering and biomedicine. The aim is  learning a nonlinear mapping,e.g. nonlocal operator, fractional, integral between infinite dimensional Banach spaces.  This non-linear operator is mapping  the input dataset (such as initial problem or boundary data, source term, material coefficient); to output (the solution field space-(time) or some observable in the domain. In this Neural Network methods, one can decompose the accurancy error in encoder, reconstruction and approximation. The complexity of algorithm scales with number of branches and Neural Network parameter. 
+Neural operators are a new paradigm for data-driven prediction of proof-of-concept simulations in engineering and biomedicine. The aim is learning a nonlinear mapping, e.g. nonlocal operator, fractional, integral between infinite dimensional Banach spaces.  This non-linear operator is
+mapping the input dataset (such as initial data or boundary data, source terms and material coefficients) to the output (the solution field in
+space-time or some observable in the domain). In these methods, one can decompose the accuracy error in encoder, reconstruction and approximation. The complexity of the algorithm scales with the number of branches and the neural network parameters. 
 
 ### References:
 
-* T. Chen and H. Chen, “Universal approximation to nonlinear operators by neural networks with arbitrary activation functions and its application to dynamical
-systems,” IEEE transactions on neural networks, vol. 6 4, pp. 911–7, 1995.
-* Lu, L., Jin, P., Pang, G. et al. Learning nonlinear operators via DeepONet based on the universal approximation theorem of operators. Nat Mach Intell 3, 218–229 (2021). https://doi.org/10.1038/s42256-021-00302-5
-* Lu Lu, Xuhui Meng, Shengze Cai, Zhiping Mao, Somdatta Goswami, Zhongqiang Zhang, George Em Karniadakis,
-A comprehensive and fair comparison of two neural operators (with practical extensions) based on FAIR data,
-Computer Methods in Applied Mechanics and Engineering, Volume 393, 2022
-
+* T. Chen and H. Chen. Universal approximation to nonlinear operators by neural networks with arbitrary activation functions and its application to dynamical
+systems.
+* L. Lu, et al. Learning nonlinear operators via DeepONet based on the universal approximation theorem of operators.
+* L. Lu, et al. A comprehensive and fair comparison of two neural operators (with practical extensions) based on FAIR data.
 
 
 ## Programming Languages for code
