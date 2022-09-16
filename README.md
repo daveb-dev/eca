@@ -169,11 +169,21 @@ Tensor is an array with dimensionality more than 2. Because of the curse of dime
 
 * I. V. Oseledets. Tensor-Train Decomposition.
 
-## 22. PINN (Supervisor: Davide)
+## 22. Deep Learning Neural Operator  (Supervisor: Davide)
+Neural operators is new paradigm for data-driven prediction of proof-of-concept simulation in engineering and biomedicine. The aim is  learning a nonlinear mapping,e.g. nonlocal operator, fractional, integral between infinite dimensional Banach spaces.  This non-linear operator is mapping  the input dataset (such as initial problem or boundary data, source term, material coefficient); to output (the solution field space-(time) or some observable in the domain. In this Neural Network methods, one can decompose the accurancy error in encoder, reconstruction and approximation. The complexity of algorithm scales with number of branches and Neural Network parameter. 
+
+### References:
+
+* T. Chen and H. Chen, “Universal approximation to nonlinear operators by neural networks with arbitrary activation functions and its application to dynamical
+systems,” IEEE transactions on neural networks, vol. 6 4, pp. 911–7, 1995.
+* Lu, L., Jin, P., Pang, G. et al. Learning nonlinear operators via DeepONet based on the universal approximation theorem of operators. Nat Mach Intell 3, 218–229 (2021). https://doi.org/10.1038/s42256-021-00302-5
+* Lu Lu, Xuhui Meng, Shengze Cai, Zhiping Mao, Somdatta Goswami, Zhongqiang Zhang, George Em Karniadakis,
+A comprehensive and fair comparison of two neural operators (with practical extensions) based on FAIR data,
+Computer Methods in Applied Mechanics and Engineering, Volume 393, 2022
 
 
 
-Programming Languages for code
+## Programming Languages for code
 
 <p align="center">
   <img  height="300" src="https://github.com/EfficientComputationAlgorithm/eca/blob/main/images/python_logo.png">
