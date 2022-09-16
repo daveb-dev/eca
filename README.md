@@ -38,7 +38,7 @@ Graph partitioning is heavily used in domain decomposition and social community 
 * M. Fiedler. Algebraic connectivity of graphs.
 * A. Pothen, H. D. Simon, and K. Liou. Partitioning sparse matrices with eigenvectors of graphs.
 
-## 4. Nested Dissection (Supervisor: Wei)
+## 4. Nested Dissection (Supervisor: Michael)
 Cholesky algorithm is a direct method for solving any symmetric positive definite system $Ax=b$, which is a modified version of Gaussian elimination. However, the resulting lower triangular matrix $L$ could be potentially dense due to newly added non-zero fill-ins, which would increases the amount of storage and computation. The amount of fill-ins depends on order in which variables are eliminated. The nested dissection is one way to obtain a good order based on graph model. One can think of the sparse matrix as a connectivity matrix and therefore build a graph. Then, the graph can be recursively splited into pieces using proper separators, and we finally numbering the nodes in separators last. Such heuristic limit the number of the fill-ins effectively.
 
 ### References:
