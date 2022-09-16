@@ -90,6 +90,9 @@ Adam algorithm.
 
 ### References:
 
+* R. S. Sutton. Two problems with backpropagation and other steepest-descent learning
+procedures for networks.
+* Y. LeCun, L. Bottou, G. B. Orr, and K. R. Müller. Efficient BackProp.
 * I. Goodfellow, Y. Bengio, and A. Courville. Deep Learning.
 
 ## 8. Monte Carlo Method (Supervisor: Davide)
