@@ -10,7 +10,7 @@ Materials:
 
 
 <p align="center">
-  <img width="700" height="300" src="https://github.com/weiwongg/eca/blob/main/running-cheetah.jpg">
+  <img width="700" height="300" src="https://github.com/EfficientComputationAlgorithm/eca/blob/main/images/running-cheetah.jpg">
 </p>
 
 ## 1. Sorting Algorithms (Supervisor: Michael)
@@ -176,8 +176,8 @@ Tensor is an array with dimensionality more than 2. Because of the curse of dime
 Programming Languages for code
 
 <p align="center">
-  <img width="300" height="300" src="https://github.com/weiwongg/eca/blob/main/images/python_logo.png">
-  <img width="300" height="300" src="https://github.com/weiwongg/eca/blob/main/images/cpp_logo.png">
+  <img width="300" height="300" src="https://github.com/EfficientComputationAlgorithm/eca/blob/main/images/python_logo.png">
+  <img width="300" height="300" src="https://github.com/EfficientComputationAlgorithm/eca/blob/main/images/cpp_logo.png">
 </p>
 
 
