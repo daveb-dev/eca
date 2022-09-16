@@ -117,7 +117,9 @@ The gradient descent is a first order optimization method, which is based on the
 ## Signal processing
 ### 14. Fast Fourier Transform
 Convolution is commonly used in the computer vision as a shift equivariant operator. The convolution $\boldsymbol{w}\circledast \boldsymbol{v}$ can be computed either as the multiplication of the circulant matrix derived from the weight vector $\boldsymbol{w}$ and the signal vector $\boldsymbol{v}$, or in the Fourier basis by first computing the element-wise product of their Fourier transforms, and then coming back to the original coordinates via the inverse Fourier transform. The fast Fourier transform (FFT) was invented to bring down the complexity to $O(n\log(n))$. The algorithm was reinvented by J. W. Cooley and J. Tukey independently 160 years later than the first discovery by Carl Friedrich Gauss.
+
 ### References:
+
 * J. W. Cooley and J. Tukey. An algorithm for the machine calculation of complex Fourier series.
 
 ### 15. Fast Wavelet Transform
