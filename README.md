@@ -42,7 +42,12 @@ Cholesky algorithm is a direct method for solving any symmetric positive definit
 
 * A. George. Nested Dissection of a Regular Finite Element Mesh.
 
-## 5. 
+## 5. Strassen algorithm
+Given two square $n\times n$ matrices, the naive method for computing the matrix multiplication is $O(n^3)$. However, it can be done in a better way using the Strassen algorithm which is a divide and conquer method. In this algorithm, one recursively subdivide each matrix evenly into 4 submatrices, and reduce the recursive call from 8 to 7. Finally the time complexity becomes around $O(n^{2.8})$.
+
+### References:
+
+* V. Strassen. Gaussian Elimination is not Optimal.
 
 ## 6. Simplex Method for Linear Programming
 A linear program is a problem of finding the optimal solution such that the target function can achieve the largest or smallest under some linear constraints. The simplex method was invented by George Dantzig for solving the linear program by hand in 1940s. It is based on the observation that the optimal solution would exit on the corner or boundary of the graph defined by the contrains. In the standard simplex method, one needs to convert the linear problem to a standard form introducing slack variables when needed. Finally, the optimal solution can be found using simplex tableau and pivot operations. 
@@ -66,6 +71,12 @@ The Monte Carlo method is a method for sampling from a random variable or a stoc
 * M. L. Rizzo. Statistical Computing with R.
 
 ## 9. Multilevel Monte Carlo method
+The Monte Carlo is one of the most common approaches of approximating the expectation of a random variable $X(\omega)$. From the weak law of large numbers theorem, the required number of samples depends on the variance for a given accuracy to achieve. If the variance is small, the Monte Carlo method even with few samples can be of high accuracy. One of the classic methods of variance reduction involves a telescoping sum called multilevel Monte Carlo method. By computing relatively few samples at the hight level, but lots of samples at the coarse level, we substaintially save in terms of the total computation.
+
+### References:
+
+* M. B. Giles. Multilevel Monte Carlo Path Simulation.
+
 
 ## 10. Krylov Subspace Iteration Methods
 Important methods for the numerical solution of eigenvalue problems and systems of linear equations, such as the Lanczos or the CG method are based on the projection onto a Krylov subspace. Given a matrix $A\in\mathbb{R}^{n\times n}$ and a vector $\boldsymbol{v}\in \mathbb{R}^n, n\in N$, the Krylov space is defined according to $\mathcal{K}_m(A,\boldsymbol{v}):=\{\boldsymbol{v},Av,\cdots,A^{m-1}\boldsymbol{v}\}$. Of particular interest are the approximation properties of these subspaces and the relation between them.
