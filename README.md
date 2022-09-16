@@ -1,6 +1,5 @@
 # MCS: Efficient Computational Algorithms SA 2022-2023
 Michael Multerer, Wei Huang, and Davide Baroli.
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/53914149?h=9e3b4b32e2" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
 ##
 General References:
@@ -13,7 +12,9 @@ https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=17639&punumber=5992).
 * G. H. Golub, C. F. Van Loan. Matrix Computations.
 * H. Harbrecht and M. Multerer. Algorithmische Mathematik (in German).
 ##
-![Hmatrix](images/hmatrix.jpeg)
+<p align="center">
+<img src="https://github.com/EfficientComputationalAlgorithms/eca/blob/main/images/hmatrix.jpeg" width=60% height=60%></img>
+</p>
 ## 1. Sorting Algorithms (Supervisor: Michael)
 In many applications it is useful to sort an array of length $n$. A simple algorithm to sort a vector is the bubblesort algorithm,
 which pairwise compares and swaps the elements of the array. Although this algorithm is quite simple, it is often unsuitable in
@@ -229,8 +230,8 @@ systems.
 ## Programming Languages for code
 
 <p align="center">
-  <img  height="300" src="https://github.com/EfficientComputationAlgorithm/eca/blob/main/images/python_logo.png">
-  <img  height="300" src="https://github.com/EfficientComputationAlgorithm/eca/blob/main/images/cpp_logo.png">
+  <img  height="300" src="https://github.com/EfficientComputationAlgorithm/eca/blob/main/images/python_logo.png"></img>
+  <img  height="300" src="https://github.com/EfficientComputationAlgorithm/eca/blob/main/images/cpp_logo.png"></img>
 </p>
 
 
