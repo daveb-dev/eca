@@ -190,6 +190,5 @@ Computer Methods in Applied Mechanics and Engineering, Volume 393, 2022
   <img  height="300" src="https://github.com/EfficientComputationAlgorithm/eca/blob/main/images/cpp_logo.png">
 </p>
 
-![la cpp](https://github.com/EfficientComputationAlgorithm/eca/blob/main/images/cpp_logo.png)
 
 
