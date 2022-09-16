@@ -1,7 +1,6 @@
 # MCS: Efficient Computational Algorithms SA 2022-2023
 Michael Multerer, Wei Huang, and Davide Baroli.
 
-[![](https://thekidshouldseethis.com/wp-content/uploads/2012/11/cheetahs-on-the-edge.jpg)](https://player.vimeo.com/video/53914149?h=9e3b4b32e2)
 ##
 General References:
 
@@ -14,7 +13,7 @@ https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=17639&punumber=5992).
 * H. Harbrecht and M. Multerer. Algorithmische Mathematik (in German).
 ##
 <p align="center">
-<img src="https://github.com/EfficientComputationalAlgorithms/eca/blob/main/images/hmatrix.jpeg" width=60% height=60%></img>
+<img src="https://thekidshouldseethis.com/wp-content/uploads/2012/11/cheetahs-on-the-edge.jpg" width=60% height=60%></img>
 </p>
 
 ## 1. Sorting Algorithms (Supervisor: Michael)
