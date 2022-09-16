@@ -176,8 +176,8 @@ Tensor is an array with dimensionality more than 2. Because of the curse of dime
 Programming Languages for code
 
 <p align="center">
-  <img width="300" height="300" src="https://github.com/weiwongg/eca/blob/main/images/python_logo.jpg">
-  <img width="300" height="300" src="https://github.com/weiwongg/eca/blob/main/images/cpp_logo.jpg">
+  <img width="300" height="300" src="https://github.com/weiwongg/eca/blob/main/images/python_logo.png">
+  <img width="300" height="300" src="https://github.com/weiwongg/eca/blob/main/images/cpp_logo.png">
 </p>
 
 
