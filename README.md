@@ -12,7 +12,7 @@ https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=17639&punumber=5992).
 * G. H. Golub, C. F. Van Loan. Matrix Computations.
 * H. Harbrecht and M. Multerer. Algorithmische Mathematik (in German).
 ##
-
+![Hmatrix](images/hmatrix.jpeg)
 ## 1. Sorting Algorithms (Supervisor: Michael)
 In many applications it is useful to sort an array of length $n$. A simple algorithm to sort a vector is the bubblesort algorithm,
 which pairwise compares and swaps the elements of the array. Although this algorithm is quite simple, it is often unsuitable in
