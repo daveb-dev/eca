@@ -190,6 +190,7 @@ The algorithm was reinvented by J. W. Cooley and J. Tukey independently 160 year
 ### References:
 
 * J. W. Cooley and J. Tukey. An algorithm for the machine calculation of complex Fourier series.
+* M. Bronstein. Deriving convolution from first principles.
 
 ## 19. Fast Wavelet Transform (Supervisor: Wei)
 Similar to the fast Fourier transform, the fast wavelet transform (FWT) computes a change of basis into a wavelet basis. Different from 
@@ -209,7 +210,7 @@ Suppose to achieve a required accuracy, we need to employ at least $N$ grid poin
 * https://sparsegrids.org
 
 ## 21.  Tensor-trains (Supervisor: Wei)
-A tensor is an array with dimensionality more than 2. Because of the curse of dimensionality, challenges are posed by the storage of high-dimensional tensors and the implementation of their arithmetic operations. The tensor-train decomposition is one possible solution, considered as an extension of low rank-approximation of matrices. In this method, one can unfold a tensor recursively by spliting indices into two parts at each step, and perform any low-rank approximation on the resulting 2D matrices. If the low rank $k$ is small, the storage will decrease from $O(n^d)$ to $O(dnk^2)$. The cost of the arithmetic operations reduces dramatically as well, e.g., addition and element-wise multiplication.
+A tensor is an array with dimensionality more than 2. Because of the curse of dimensionality, challenges are posed by the storage of high-dimensional tensors and the implementation of their arithmetic operations. The tensor-train decomposition is one possible solution, considered as an extension of low rank-approximation of matrices. In this method, one can unfold a tensor recursively by spliting indices into two parts at each step, and perform any low-rank approximation on the resulting 2D matrices. If the low rank $r$ is small, the storage will decrease from $O(n^d)$ to $O(dnr^2)$. The cost of the arithmetic operations reduces dramatically as well, e.g., addition and element-wise multiplication.
 
 ### References:
 
