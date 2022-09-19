@@ -208,14 +208,14 @@ Suppose to achieve a required accuracy, we need to employ at least $N$ grid poin
 * H. J. Bungartz and M. Griebel. Sparse grids.
 * https://sparsegrids.org
 
-## 21.  Tensor-train Decomposition (Supervisor: Wei)
+## 21.  Tensor-trains (Supervisor: Wei)
 A tensor is an array with dimensionality more than 2. Because of the curse of dimensionality, challenges are posed by the storage of high-dimensional tensors and the implementation of their arithmetic operations. The tensor-train decomposition is one possible solution, considered as an extension of low rank-approximation of matrices. In this method, one can unfold a tensor recursively by spliting indices into two parts at each step, and perform any low-rank approximation on the resulting 2D matrices. If the low rank $k$ is small, the storage will decrease from $O(n^d)$ to $O(dnk^2)$. The cost of the arithmetic operations reduces dramatically as well, e.g., addition and element-wise multiplication.
 
 ### References:
 
 * I. V. Oseledets. Tensor-Train Decomposition.
 
-## 22. Deep Learning Neural Operator  (Supervisor: Davide)
+## 22. Deep Learning: Neural Operators  (Supervisor: Davide)
 Neural operators are a new paradigm for data-driven prediction of proof-of-concept simulations in engineering and biomedicine. The aim is learning a nonlinear mapping, e.g. nonlocal operator, fractional, integral between infinite dimensional Banach spaces.  This non-linear operator is
 mapping the input dataset (such as initial data or boundary data, source terms and material coefficients) to the output (the solution field in
 space-time or some observable in the domain). In these methods, one can decompose the accuracy error in encoder, reconstruction and approximation. The complexity of the algorithm scales with the number of branches and the neural network parameters. 
