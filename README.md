@@ -1,5 +1,5 @@
 # MCS: Efficient Computational Algorithms SA 2023-2024
-Michael Multerer, Davide Baroli, Valentina Ghidini and Sara Avisani.
+Michael Multerer, Davide Baroli, Valentina Ghidini and Sara Avesani.
 
 ##
 General References:
