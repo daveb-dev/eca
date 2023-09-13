@@ -24,10 +24,13 @@ Text (10 lines)
 * B. Korte and J. Vygen. Combinatorial Optimization.
 
 ## 1. Approximate Bayesian Computation (ABC)  (Supervisor: Valentina)
-Text (10 lines)
+In Bayesian statistics, the posterior distribution of a parameter $\theta$ given a dataset $D$ is usually computed using Bayes' rule
+$$p(\theta | D) = \frac{p(D | \theta) p(\theta)}{p(D)} \propto p(D | \theta) p(\theta)$$
+where $p(\theta)$ is the prior distribution of the parameter, $p(D)$ the marginal distribution of the data (which usually acts as a normalising constant, and can be omitted) and $p(D|\theta)$ is the likelihood. In many cases, the likelihood $p(D|\theta)$ is either unknown in closed form, or computationally intractable, but nevertheless necessary for posterior inference. Hence the need to resort to approximate computation. To this aim, there exist different classes of algorithms, among which we can find ABC-based ones.
+
+
 
 ### References:
-(2 main references)
 * <a href="https://allendowney.github.io/ThinkBayes2/chap20.html"> Allen B. Downey, Think Bayes (2021) - Chapter 20 </a>
 * <a href="https://pubmed.ncbi.nlm.nih.gov/23341757/"> Sunnaker et al., Approximate Bayesian computation (2019)</a> 
 
