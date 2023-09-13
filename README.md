@@ -32,7 +32,7 @@ where $p(\theta)$ is the prior distribution of the parameter, $p(D)$ the margina
 * <a href="https://allendowney.github.io/ThinkBayes2/chap20.html"> Allen B. Downey; Think Bayes (2021) - Chapter 20 </a>
 * <a href="https://pubmed.ncbi.nlm.nih.gov/23341757/"> Sunnaker et al.; Approximate Bayesian computation (2019)</a>
 
-## 2. Inverse Transform Sampling (Supervisor: Valentina)
+## 2. Inverse Transform sampling (Supervisor: Valentina)
 In a plethora of computational problems, there is a need to simulate from a given distribution. For example, it may be necessary to simulate white noise by sampling from a standard gaussian distribution. But how does one do that? 
 An elegant way is to use Inverse Transform Sampling to sample $X \sim F_X(x)$, where $F_X(x) = P(X \leq x)$ is the cumulative distribution function (CDF) of $X$. To use this algorithm, we only need to have $F_X(\cdot)$ invertible and and efficient way to sample from a uniform distribution on $[0,1]$ (spoiler: it exists!).
 
@@ -47,15 +47,14 @@ As said above (see 2.), in a plethora of computational problems, there is a need
 * <a href="http://www.markirwin.net/stat221/Refs/flury90.pdf"> Bernard D. Flury; Acceptance-rejection sampling made easy (1990) </a>
 * Christian Robert, George Casella; Monte Carlo Statistical Methods (2013) - Chapter 2.3
 
-## 4. Gibbs Sampler (Supervisor: Valentina)
+## 4. Gibbs sampler (Supervisor: Valentina)
 The world is not univariate: usually, to model real data, we need to resort to multivariate distributions, and consequently some inferencial techniques require to sample from them. For example, consider a multivariate, $p-$dimensional parameter $\theta = (\theta_1, \dots, \theta_p)$ and suppose it is necessary to sample from its $p-$dimensional distribution $p(\theta)$. Then, the Gibbs sampler proposes to do that by iteratively sampling from the corresponding (univariate) conditional distributions $p(\theta_i | \theta_1, \dots, \theta_{i-1},\theta_{i+1}, \dots, \theta_p)$, for $i=1, \dots, p$.
 
 
 ### References:
 * <a href="http://www2.stat.duke.edu/~scs/Courses/Stat376/Papers/Basic/CasellaGeorge1992.pdf"> George Casella, Edward I. George; Explaining the Gibbs Sampler (1992) </a>
 * Christian Robert, George Casella; Monte Carlo Statistical Methods (2013) - Chapter 9
-
-* 
+ 
 ## Programming Languages for code
 
 <p align="center">
