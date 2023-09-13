@@ -23,6 +23,13 @@ Text (10 lines)
 (2 main references)
 * B. Korte and J. Vygen. Combinatorial Optimization.
 
+## 1. Approximate Bayesian Computation (ABC)  (Supervisor: Valentina)
+Text (10 lines)
+
+### References:
+(2 main references)
+* <a href="https://allendowney.github.io/ThinkBayes2/chap20.html"> Allen B. Downey, Think Bayes (2021) - Chapter 20 </a>
+* <a href="https://pubmed.ncbi.nlm.nih.gov/23341757/"> Sunnaker et al., Approximate Bayesian computation (2019)</a> 
 
 ## Programming Languages for code
 
