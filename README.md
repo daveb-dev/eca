@@ -36,10 +36,18 @@ where $p(\theta)$ is the prior distribution of the parameter, $p(D)$ the margina
 In a plethora of computational problems, there is a need to simulate from a given distribution. For example, it may be necessary to simulate white noise by sampling from a standard gaussian distribution. But how does one do that? 
 An elegant way is to use Inverse Transform Sampling to sample $X \sim F_X(x)$, where $F_X(x) = P(X \leq x)$ is the cumulative distribution function (CDF) of $X$. To use this algorithm, we only need to have $F_X(\cdot)$ invertible and and efficient way to sample from a uniform distribution on $[0,1]$ (spoiler: it exists!).
 
-### References
-
+### References:
 * <a href="https://stephens999.github.io/fiveMinuteStats/inverse_transform_sampling.html"> Easy blogpost </a>
 * Soon-to-be-found appropriate reference
+
+## 3. Acceptance-Rejection algorithm (Supervisor: Valentina)
+As said above (see 2.), in a plethora of computational problems, there is a need to simulate from a given distribution. However, sometimes it is not possible to simulate directly from the target distribution $X \sim F_X(x)$, since it may have some undesirable properties (for example, it may have an uncomputable normalising constant, or its cumulative distribution $F_X(\cdot)$ may not be invertible). In this situation, we can sample observations from an "easier" distribution $ \tilde{F}_X(x)$, and then accept them if they are suitable to represent the target distribution we are interested in. This is what Rejection sampling does.
+
+### References:
+* <a href="http://www.markirwin.net/stat221/Refs/flury90.pdf"> Bernard D. Flury, Acceptance-rejection sampling made easy (1990) </a>
+* Christian Robert, George Casella - Monte Carlo Statistical Methods (2013) - Chapter 2.3
+
+
 ## Programming Languages for code
 
 <p align="center">
