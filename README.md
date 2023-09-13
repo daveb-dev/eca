@@ -41,7 +41,7 @@ An elegant way is to use Inverse Transform Sampling to sample $X \sim F_X(x)$, w
 * Soon-to-be-found appropriate reference
 
 ## 3. Acceptance-Rejection algorithm (Supervisor: Valentina)
-As said above (see 2.), in a plethora of computational problems, there is a need to simulate from a given distribution. However, sometimes it is not possible to simulate directly from the target distribution $X \sim F_X(x)$, since it may have some undesirable properties (for example, it may have an uncomputable normalising constant, or its cumulative distribution $F_X(\cdot)$ may not be invertible). In this situation, we can propose observations from an "easier" distribution $ X_\text{proposal} \sim G_X(x)$, and then accept them if they are suitable to represent the target distribution we are interested in. This is what Rejection sampling does.
+As said above (see 2.), in a plethora of computational problems, there is a need to simulate from a given distribution. However, sometimes it is not possible to simulate directly from the target distribution $X \sim F_X(x)$, since it may have some undesirable properties (for example, it may have an uncomputable normalising constant, or its cumulative distribution $F_X(\cdot)$ may not be invertible). In this situation, we can propose observations from an "easier" distribution $ X_{\text{proposal}} \sim G_X(x)$, and then accept them if they are suitable to represent the target distribution we are interested in. This is what Rejection sampling does.
 
 ### References:
 * <a href="http://www.markirwin.net/stat221/Refs/flury90.pdf"> Bernard D. Flury; Acceptance-rejection sampling made easy (1990) </a>
