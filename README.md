@@ -203,7 +203,7 @@ where $F:Y\to\mathbb{R}$ and $G:X\to\mathbb{R}$ are convex functions over Hilber
 whose proximity operators can be computed, and $L:X\to Y$ is a linear operator. 
 One should be able to compute efficiently the proximal mapping of $F$ and $G$, defined as: 
 
-$$ \mathop{\text{Prox}}_{\gamma F}(x) =  \mathop{\text{argmin}}_y \frac{1}{2} \|x-y\| ^2  + \gamma F(y) $$
+$$ \mathop{\text{Prox}}_{\gamma F}(x) =  \mathop{\text{argmin}}_y \frac{1}{2} {\lVert x-y \rVert}^2  + \gamma F(y) $$
 
 (the same definition applies also for $G$). 
 Several problems of image analysis can be cast into this framework. An example is the 
