@@ -198,7 +198,7 @@ A tensor is an array with dimensionality more than 2. Because of the curse of di
 <p align="center">
   <img  height="300" src="https://github.com/EfficientComputationAlgorithm/eca/blob/main/images/python_logo.png"></img>
   <img  height="300" src="https://github.com/EfficientComputationAlgorithm/eca/blob/main/images/cpp_logo.png"></img>
-   <img  height="300" src=" https://www.r-project.org/logo/Rlogo.png"></img>
+   <img  height="300" src="https://www.r-project.org/logo/Rlogo.png"></img>
 </p>
 
 
