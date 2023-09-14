@@ -98,6 +98,10 @@ As said above (see 7.), in a plethora of computational problems, there is a need
 
 ## 9. Gibbs sampler (Supervisor: Valentina)
 The world is not univariate: usually, to model real data, we need to resort to multivariate distributions, and consequently some inferencial techniques require to sample from them. For example, consider a multivariate, p-dimensional parameter $\theta = (\theta_1, \dots, \theta_p)$ and suppose it is necessary to sample from its $ p- $dimensional distribution $p(\theta)$. Then, the Gibbs sampler proposes to do that by iteratively sampling from the corresponding (univariate) conditional distributions $p(\theta_i | \theta_1, \dots, \theta_{i-1},\theta_{i+1}, \dots, \theta_p)$, for $i=1, \dots, p$.
+### References:
+* <a href="http://www2.stat.duke.edu/~scs/Courses/Stat376/Papers/Basic/CasellaGeorge1992.pdf"> George Casella, Edward I. George; Explaining the Gibbs Sampler (1992) </a>
+* Christian Robert, George Casella; Monte Carlo Statistical Methods (2013) - Chapter 9
+
 
 ## 10. Krylov Subspace Iteration Methods (Supervisor: Michael)
 Important methods for the numerical solution of eigenvalue problems and large systems of linear equations, such as the Lanczos or the CG method are based on the projection onto a Krylov subspace. Given a matrix $A\in\mathbb{R}^{n\times n}$ and a vector $v\in \mathbb{R}^n, n\in N$, the Krylov space is defined according to $\mathcal{K}_m(A,v):=\{v,Av,\cdots,A^{m-1}\boldsymbol{v}\}$. Of particular interest are the approximation properties of these subspaces and the relation between them.
@@ -183,15 +187,19 @@ Suppose to achieve a required accuracy, we need to employ at least $N$ grid poin
 
 ## 20.  Tensor-trains (Supervisor: Davide)
 A tensor is an array with dimensionality more than 2. Because of the curse of dimensionality, challenges are posed by the storage of high-dimensional tensors and the implementation of their arithmetic operations. The tensor-train decomposition is one possible solution, considered as an extension of low rank-approximation of matrices. In this method, one can unfold a tensor recursively by spliting indices into two parts at each step, and perform any low-rank approximation on the resulting 2D matrices. If the low rank $r$ is small, the storage will decrease from $O(n^d)$ to $O(dnr^2)$. The cost of the arithmetic operations reduces dramatically as well, e.g., addition and element-wise multiplication.
-
 ### References:
 
 * I. V. Oseledets. Tensor-Train Decomposition.
 
 
-### References:
-* <a href="http://www2.stat.duke.edu/~scs/Courses/Stat376/Papers/Basic/CasellaGeorge1992.pdf"> George Casella, Edward I. George; Explaining the Gibbs Sampler (1992) </a>
-* Christian Robert, George Casella; Monte Carlo Statistical Methods (2013) - Chapter 9
+## 21.  Proximal Operator (Supervisor: Sara)
+
+
+## 22.  Multigrid (Supervisor: Sara)
+
+
+
+
  
 ## Programming Languages for code
 
