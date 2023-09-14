@@ -187,6 +187,7 @@ Suppose to achieve a required accuracy, we need to employ at least $N$ grid poin
 
 ## 20.  Tensor-trains (Supervisor: Davide)
 A tensor is an array with dimensionality more than 2. Because of the curse of dimensionality, challenges are posed by the storage of high-dimensional tensors and the implementation of their arithmetic operations. The tensor-train decomposition is one possible solution, considered as an extension of low rank-approximation of matrices. In this method, one can unfold a tensor recursively by spliting indices into two parts at each step, and perform any low-rank approximation on the resulting 2D matrices. If the low rank $r$ is small, the storage will decrease from $O(n^d)$ to $O(dnr^2)$. The cost of the arithmetic operations reduces dramatically as well, e.g., addition and element-wise multiplication.
+
 ### References:
 
 * I. V. Oseledets. Tensor-Train Decomposition.
@@ -195,9 +196,15 @@ A tensor is an array with dimensionality more than 2. Because of the curse of di
 ## 21.  Proximal Operator (Supervisor: Sara)
 
 
-## 22.  Multigrid (Supervisor: Sara)
+## 22.  Algebraic Multigrid (Supervisor: Sara)
+Algebraic Multigrid (AMG) is a numerical technique used in computational mathematics and scientific computing. It is an iterative solver that operates on the matrix representation of the linear system, typically without requiring knowledge of the underlying geometry.
+AMG leverages a hierarchical approach, where it constructs a hierarchy of finer grid levels, each of which represents a simplified version of the original problem.
+At the coarsest levels, AMG solves the linear system directly, which is computationally cheaper due to reduced problem size. AMG is known for its excellent scalability and robustness, making it well-suited for parallel computing environments and a wide range of problem types.
 
-
+### References:
+* K. Stüben. Algebraic Multigrid, An Introduction with Applications. https://www.scai.fraunhofer.de/content/dam/scai/de/documents/AllgemeineDokumentensammlung/SchnelleLoeser/SAMG/AMG_Introduction.pdf
+* J. W. Ruge and K. Stüben. Algebraic Multigrid.
+ https://epubs.siam.org/doi/10.1137/1.9781611971057.ch4 
 
 
  
