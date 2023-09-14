@@ -221,7 +221,20 @@ At the coarsest levels, AMG solves the linear system directly, which is computat
  https://epubs.siam.org/doi/10.1137/1.9781611971057.ch4 
 
 
- 
+## 23. Multilevel Monte Carlo method (Supervisor: Sara)
+The Monte Carlo is one of the most common approaches for approximating the expectation of a random variable $X(\omega)$.
+From the weak law of large numbers theorem, the required number of samples depends on the variance for a given accuracy to achieve.
+If the variance is small, the Monte Carlo method even with few samples can be of high accuracy.
+One of the classic methods for variance reduction involves a hierarchy of control variates and is called
+multilevel Monte Carlo method. By computing relatively few samples at the high level of the hierarchy,
+but lots of samples at the coarse level, we substaintially save in terms of the total computation.
+
+### References:
+
+* S. Heinrich. Multilevel Monte Carlo Methods
+* M. B. Giles. Multilevel Monte Carlo Path Simulation.
+
+  
 ## Programming Languages for code
 
 <p align="center">
