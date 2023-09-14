@@ -187,7 +187,7 @@ Suppose to achieve a required accuracy, we need to employ at least $N$ grid poin
 * H. J. Bungartz and M. Griebel. Sparse grids.
 * https://sparsegrids.org
 
-## 21.  Tensor-trains (Supervisor: Sara)
+## 21.  Tensor-trains (Supervisor: Davide)
 A tensor is an array with dimensionality more than 2. Because of the curse of dimensionality, challenges are posed by the storage of high-dimensional tensors and the implementation of their arithmetic operations. The tensor-train decomposition is one possible solution, considered as an extension of low rank-approximation of matrices. In this method, one can unfold a tensor recursively by spliting indices into two parts at each step, and perform any low-rank approximation on the resulting 2D matrices. If the low rank $r$ is small, the storage will decrease from $O(n^d)$ to $O(dnr^2)$. The cost of the arithmetic operations reduces dramatically as well, e.g., addition and element-wise multiplication.
 
 ### References:
