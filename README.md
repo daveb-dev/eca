@@ -43,7 +43,7 @@ on the corresponding matrix factorization can be proven.
 
 * A. George. Nested Dissection of a Regular Finite Element Mesh.
 
-## 3. Strassen algorithm (Supervisor: Sara)
+## 3. Strassen Algorithm (Supervisor: Sara)
 Given two square $n\times n$ matrices, the naive method for computing the matrix multiplication has cost $O(n^3)$. However, it can
 be done in a better way using Strassen's algorithm which is a divide and conquer method and reuses intermediate products.
 As a consequence, the cost of the matrix factorization is reduced to approximately $O(n^{2.8})$. Based on this observation,
@@ -81,7 +81,7 @@ where $p(\theta)$ is the prior distribution of the parameter, $p(D)$ the margina
 * <a href="https://allendowney.github.io/ThinkBayes2/chap20.html"> Allen B. Downey; Think Bayes (2021) - Chapter 20 </a>
 * <a href="https://pubmed.ncbi.nlm.nih.gov/23341757/"> Sunnaker et al.; Approximate Bayesian computation (2019)</a>
 
-## 7. Inverse Transform sampling (Supervisor: Valentina)
+## 7. Inverse Transform Sampling (Supervisor: Valentina)
 In a plethora of computational problems, there is a need to simulate from a given distribution. For example, it may be necessary to simulate white noise by sampling from a standard gaussian distribution. But how does one do that? 
 An elegant way is to use Inverse Transform Sampling to sample $X \sim F_X(x)$, where $F_X(x) = P(X \leq x)$ is the cumulative distribution function (CDF) of $X$. To use this algorithm, we only need to have $F_X(\cdot)$ invertible and and efficient way to sample from a uniform distribution on $[0,1]$ (spoiler: it exists!).
 
@@ -89,14 +89,14 @@ An elegant way is to use Inverse Transform Sampling to sample $X \sim F_X(x)$, w
 * <a href="https://stephens999.github.io/fiveMinuteStats/inverse_transform_sampling.html"> Easy blogpost </a>
 * Soon-to-be-found appropriate reference
 
-## 8. Acceptance-Rejection algorithm (Supervisor: Valentina)
+## 8. Acceptance-Rejection Algorithm (Supervisor: Valentina)
 As said above (see 7.), in a plethora of computational problems, there is a need to simulate from a given distribution. However, sometimes it is not possible to simulate directly from the target distribution $X \sim F_X(x)$, since it may have some undesirable properties (for example, it may have an uncomputable normalising constant, or its cumulative distribution $F_X(\cdot)$ may not be invertible). In this situation, we can propose observations from an "easier" distribution $G_X(x)$, and then accept them if they are suitable to represent the target distribution we are interested in. This is what Rejection sampling does.
 
 ### References:
 * <a href="http://www.markirwin.net/stat221/Refs/flury90.pdf"> Bernard D. Flury; Acceptance-rejection sampling made easy (1990) </a>
 * Christian Robert, George Casella; Monte Carlo Statistical Methods (2013) - Chapter 2.3
 
-## 9. Gibbs sampler (Supervisor: Valentina)
+## 9. Gibbs Dampler (Supervisor: Valentina)
 The world is not univariate: usually, to model real data, we need to resort to multivariate distributions, and consequently some inferencial techniques require to sample from them. For example, consider a multivariate, p-dimensional parameter $\theta = (\theta_1, \dots, \theta_p)$ and suppose it is necessary to sample from its $ p- $dimensional distribution $p(\theta)$. Then, the Gibbs sampler proposes to do that by iteratively sampling from the corresponding (univariate) conditional distributions $p(\theta_i | \theta_1, \dots, \theta_{i-1},\theta_{i+1}, \dots, \theta_p)$, for $i=1, \dots, p$.
 ### References:
 * <a href="http://www2.stat.duke.edu/~scs/Courses/Stat376/Papers/Basic/CasellaGeorge1992.pdf"> George Casella, Edward I. George; Explaining the Gibbs Sampler (1992) </a>
@@ -129,7 +129,6 @@ in the spectral norm as well as in the Frobenius norm.
 * C. Eckart and G. Young. The approximation of one matrix by another of lower rank.
 
 
-
 ## 13. Randomized Low-rank Approximation (Supervisor: Sara)
 A very simple class of low-rank approximations of a matrix is obtained by using the product of the matrix and random vectors. A low-rank approximation can be obtained from the vectors in the image of the matrix. Since the main effort of these methods is dominated by matrix-vector multiplications, these algorithms are usually very fast for sparse matrices. In return, however, only pessimistic error estimates are avaliable, and the actual error is often much better.
 
@@ -142,13 +141,15 @@ The pivoted Cholesky decomposition is an extremely efficient algorithm to determ
 ### References:
 * H. Harbrecht, M. Multerer, and R. Schneider. On the low-rank approximation by the pivoted Cholesky decomposition.
 
-## 15. Fast Multipole Methods (Supervisor: Michael)
+
+## 15. Fast Multipole Method (Supervisor: Michael)
 The fast multipole method (FMM) is an efficient way to compute the matrix-vector multiplication in $O(n)$ or $O(n\log(n))$ with a bounded error for a particular structured dense $n\times n$ matrix $\Phi$. Such matrices arising out of the $n$-body problem are usually blockwise separable of order k，i.e., $\Phi|_{\tau,\sigma}\approx AB$, where $A$ and $B$ are $n\times k$ matrix and $k\times n$ matrix respectively. Herein,
 $\tau$ and $\sigma$ are suitable index sets. The matrix-vector multiplication for this block is thus approximately equivalent to perform $A(Bx)$. Because $k$ is usually $O(1)$, the computaional cost is reduced dramatically. Besides, one of the distinct advantages of the FMM is its rigorous error estimates. 
 
 ### References:
 
 * L. Greengard and V. Rokhlin. A Fast Algorithm for Particle Simulations.
+
 
 ## 16. Hierarchical Matrices (Supervisor: Michael)
 Hierarchical matrices are special matrices $\mathcal{H}\in \mathbb{R}^{n\times n}$, which have blockwise low-rank $k \ll n$ with respect to a special tree-like partitioning $\tau$, the so-called "Block Cluster Tree". A special challenge is posed by the arithmetic of these matrices, for example the addition and multiplication. In the addition, the rank per matrix block can double and must be recompressed accordingly. For the multiplication of hierarchical matrices with even the same block structure, matrix blocks of different sizes need to be combined.
@@ -157,6 +158,7 @@ Hierarchical matrices are special matrices $\mathcal{H}\in \mathbb{R}^{n\times n
 
 * S. Börm, L. Grasedyck, W. Hackbusch. Hierarchical Matrices.
 * W. Hackbusch. A sparse matrix arithmetic based on on H-Matrices. Part I: Introduction to H-Matrices.
+
 
 ## 17. Fast Fourier Transform (Supervisor: Sara)
 Convolution is commonly used in computer vision as a shift equivariant operator. The convolution ${w}\star{v}$ can be computed either as the multiplication of the circulant matrix derived from the weight vector ${w}$ and the signal vector ${v}$, or in the Fourier basis by first computing the element-wise product of their Fourier transforms, and then coming back to the original coordinates via the inverse Fourier transform. The fast Fourier transform (FFT) was invented to bring down the cost to $O(n\log(n))$. 
@@ -168,6 +170,7 @@ The algorithm was reinvented by J. W. Cooley and J. Tukey independently 160 year
 * J. W. Cooley and J. Tukey. An algorithm for the machine calculation of complex Fourier series.
 * M. Bronstein. Deriving convolution from first principles.
 
+
 ## 18. Fast Wavelet Transform (Supervisor: Sara)
 Similar to the fast Fourier transform, the fast wavelet transform (FWT) computes a change of basis into a wavelet basis. Different from 
 the fast Fourier transform, the FWT can be performed in linear cost with respect to the length of the signal.
@@ -177,6 +180,7 @@ It is used in many fields, primarily for signal processing and, consequently, im
 
 * S. Mallat. A wavelet tour of signal processing.
 
+
 ## 19. Sparse Grids (Supervisor: Jacopo-Sara)
 Suppose to achieve a required accuracy, we need to employ at least $N$ grid points in the one-dimensional space. With regular grid-based approaches, a straight forward extension to $d$ dimensions leads to $N^d$ grid points to reach the same accuracy. Therefore, regular grid-based methods exhibit the problem of the exponential dependence of dimensionality, i.e., the curse of dimensionality. For the approximation of certain classes of functions, sparse grids overcome the curse of dimensionality and lead to efficient representations.
 
@@ -184,6 +188,7 @@ Suppose to achieve a required accuracy, we need to employ at least $N$ grid poin
 
 * H. J. Bungartz and M. Griebel. Sparse grids.
 * https://sparsegrids.org
+
 
 ## 20.  Tensor-trains (Supervisor: Davide)
 A tensor is an array with dimensionality more than 2. Because of the curse of dimensionality, challenges are posed by the storage of high-dimensional tensors and the implementation of their arithmetic operations. The tensor-train decomposition is one possible solution, considered as an extension of low rank-approximation of matrices. In this method, one can unfold a tensor recursively by spliting indices into two parts at each step, and perform any low-rank approximation on the resulting 2D matrices. If the low rank $r$ is small, the storage will decrease from $O(n^d)$ to $O(dnr^2)$. The cost of the arithmetic operations reduces dramatically as well, e.g., addition and element-wise multiplication.
@@ -215,9 +220,11 @@ where $L(u)=\nabla u$ and $F$ is the $L^1$ norm, and $G$ proportional to the $L^
 
 
 ## 22.  Algebraic Multigrid (Supervisor: Sara)
-Algebraic Multigrid (AMG) is a numerical technique used in computational mathematics and scientific computing. It is an iterative solver that operates on the matrix representation of the linear system, typically without requiring knowledge of the underlying geometry.
+Algebraic Multigrid (AMG) is a numerical technique for the solution of large, sparse linear systems. It is an iterative solver that operates on the matrix representation of the 
+linear system, typically without requiring knowledge of some underlying geometry.
 AMG leverages a hierarchical approach, where it constructs a hierarchy of finer grid levels, each of which represents a simplified version of the original problem.
-At the coarsest levels, AMG solves the linear system directly, which is computationally cheaper due to reduced problem size. AMG is known for its excellent scalability and robustness, making it well-suited for parallel computing environments and a wide range of problem types.
+At the coarsest level, AMG solves the linear system directly, which is computationally cheaper due to reduced problem size. AMG is known for its excellent scalability and robustness, 
+making it well-suited for parallel computing environments and a wide range of problem types.
 
 ### References:
 * [K. Stüben. Algebraic Multigrid, An Introduction with Applications](https://www.scai.fraunhofer.de/content/dam/scai/de/documents/AllgemeineDokumentensammlung/SchnelleLoeser/SAMG/AMG_Introduction.pdf)
