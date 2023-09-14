@@ -202,7 +202,7 @@ $$ \min_{x \in X} F(Lx) + G(x) $$
 where $F:Y\to\mathbb{R}$ and $G:X\to\mathbb{R}$ are convex functions over Hilbert spaces $X$ and $Y$, whose proximity operators can be computed, and $L:X\to Y$ is a linear operator. \\
 One should be able to compute efficiently the proximal mapping of $F$ and $G$, defined as: 
 
-$$ \mathrm{Prox}_{ \gamma F}(x) = \mathrm{argmin}{y} \frac{1}{2} ||x-y||^2  + \gamma F(y) $$ 
+$$ \mathrm{Prox}_{ \gamma F}(x) = \mathrm{argmin} _{y} \frac{1}{2} ||x-y||^2  + \gamma F(y) $$ 
 
 (the same definition applies also for $G$). 
 Several problems of image analysis could be cast into this framework. For instance, 
