@@ -195,6 +195,20 @@ A tensor is an array with dimensionality more than 2. Because of the curse of di
 
 ## 21.  Proximal Operator (Supervisor: Sara)
 
+Consider an optimization problem of the form
+$$ \umin{x\in X} F(Lx) + G(x) $$
+where $F:Y\to\RR$ and $G:X\to\RR$ are convex functions over Hilbert spaces $X$ and $Y$, whose proximity operators can be computed, and $L:X\to Y$ is a linear operator.
+One should be able to compute efficiently the proximal mapping of $F$ and $G$, defined as:
+$$ \text{Prox}_{\gamma F}(x) = \uargmin{y} \frac{1}{2}\norm{x-y}^2 + \ga F(y) $$
+(the same definition applies also for $G$).
+Several problems of image analysis could be cast into this framework. For instance, 
+to denoise an image $\mathbf{I}$ by minimizing the $L^1$ norm of the gradient of reconstructed image, and $L^2$ norm from the original image. The problem therefore reads
+$$\umin{u}\int_\Omega|\nabla u|dx+\frac\lambda2\|u-\mathbf{I}\|_2^2$$
+where $L(u)=\nabla u$ and $F$ is the $L^1$ norm, and $G$ proportionnal to the $L^2$ distance between $u$ and $\mathbf{I}$.
+
+### References:
+* A. Chambolle and T. Pock. A First-order primal-dual algorithm for convex problems with application to imaging. _Journal of Mathematical Imaging and Vision_. Vol. 40, no. 1, 2011
+
 
 ## 22.  Algebraic Multigrid (Supervisor: Sara)
 Algebraic Multigrid (AMG) is a numerical technique used in computational mathematics and scientific computing. It is an iterative solver that operates on the matrix representation of the linear system, typically without requiring knowledge of the underlying geometry.
