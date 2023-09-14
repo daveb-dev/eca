@@ -61,13 +61,16 @@ A linear program is a problem of finding the optimal solution such that the targ
 
 * K. Murty. Linear programming.
 
-## 5. Gradient Descent and Stochastic Gradient Descent (Supervisor: Davide)
-Gradient descent is a first order optimization method, which is based on the fact that function value decreases fastest along the opposite direction of its gradient. In spite of its simplicity, it is successfully used to train various neural networks, e.g., fully connected neural networks, convolutional neural networks, and recurrent neural networks. Their gradients are computed by the so-called backpropagation algorithm. In order to speed up the convergence process, there were many variants of gradient descent invented, for example, batch gradient descent, stochastic gradient descent, and the
-Adam algorithm.
+## 5. Adaptive Cross Approximation (Supervisor: Sara)
+The adaptive cross approximation is a method for the approximation of asymptotically smooth functions.
+These are bivariate functions $f(x,y)$ whose derivatives apart from the diagonal $x=y$ exhibit a certain decay behavior.
+It can be shown that these functions can be partitioned in such a way that individual low-rank regions can be approximated.
+The actual algorithm is then based on a partially pivoted Gaussian algorithm with a corresponding adaptive decay criterion.
 
 ### References:
 
-* I. Goodfellow, Y. Bengio, and A. Courville. Deep  Learning.
+* M. Bebendorf. Approximation of boundary element matrices.
+* M. Bebendorf. Hierarchical Matrices.
 
 ## 6. Approximate Bayesian Computation (ABC)  (Supervisor: Valentina)
 In Bayesian statistics, the posterior distribution of a parameter $\theta$ given a dataset $D$ is usually computed using Bayes' rule
@@ -121,30 +124,21 @@ in the spectral norm as well as in the Frobenius norm.
 ### References:
 * C. Eckart and G. Young. The approximation of one matrix by another of lower rank.
 
-## 13. Adaptive Cross Approximation (Supervisor: Sara)
-The adaptive cross approximation is a method for the approximation of asymptotically smooth functions.
-These are bivariate functions $f(x,y)$ whose derivatives apart from the diagonal $x=y$ exhibit a certain decay behavior.
-It can be shown that these functions can be partitioned in such a way that individual low-rank regions can be approximated.
-The actual algorithm is then based on a partially pivoted Gaussian algorithm with a corresponding adaptive decay criterion.
 
-### References:
 
-* M. Bebendorf. Approximation of boundary element matrices.
-* M. Bebendorf. Hierarchical Matrices.
-
-## 14. Randomized Low-rank Approximation (Supervisor: Sara)
+## 13. Randomized Low-rank Approximation (Supervisor: Sara)
 A very simple class of low-rank approximations of a matrix is obtained by using the product of the matrix and random vectors. A low-rank approximation can be obtained from the vectors in the image of the matrix. Since the main effort of these methods is dominated by matrix-vector multiplications, these algorithms are usually very fast for sparse matrices. In return, however, only pessimistic error estimates are avaliable, and the actual error is often much better.
 
 ### References:
 * N. Halko, P. G. Martinsson, J. A. Tropp. Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions.
 
-## 15. Pivoted Cholesky Decomposition (Supervisor: Michael)
+## 14. Pivoted Cholesky Decomposition (Supervisor: Michael)
 The pivoted Cholesky decomposition is an extremely efficient algorithm to determine a low-rank approximation of a symmetric, positive semidefinite matrix.  To obtain an approximation of a matrix,  only the diagonal and $m$ columns of the underlying matrix need to be computed. Therefore, the method seems appealing especially for fully populated matrices. In particular, a rigorous posteriori error control is available in the trace norm, so that the method always yields a reliable approximation.
 
 ### References:
 * H. Harbrecht, M. Multerer, and R. Schneider. On the low-rank approximation by the pivoted Cholesky decomposition.
 
-## 16. Fast Multipole Methods (Supervisor: Michael)
+## 15. Fast Multipole Methods (Supervisor: Michael)
 The fast multipole method (FMM) is an efficient way to compute the matrix-vector multiplication in $O(n)$ or $O(n\log(n))$ with a bounded error for a particular structured dense $n\times n$ matrix $\Phi$. Such matrices arising out of the $n$-body problem are usually blockwise separable of order k，i.e., $\Phi|_{\tau,\sigma}\approx AB$, where $A$ and $B$ are $n\times k$ matrix and $k\times n$ matrix respectively. Herein,
 $\tau$ and $\sigma$ are suitable index sets. The matrix-vector multiplication for this block is thus approximately equivalent to perform $A(Bx)$. Because $k$ is usually $O(1)$, the computaional cost is reduced dramatically. Besides, one of the distinct advantages of the FMM is its rigorous error estimates. 
 
@@ -152,7 +146,7 @@ $\tau$ and $\sigma$ are suitable index sets. The matrix-vector multiplication fo
 
 * L. Greengard and V. Rokhlin. A Fast Algorithm for Particle Simulations.
 
-## 17. Hierarchical Matrices (Supervisor: Michael)
+## 16. Hierarchical Matrices (Supervisor: Michael)
 Hierarchical matrices are special matrices $\mathcal{H}\in \mathbb{R}^{n\times n}$, which have blockwise low-rank $k \ll n$ with respect to a special tree-like partitioning $\tau$, the so-called "Block Cluster Tree". A special challenge is posed by the arithmetic of these matrices, for example the addition and multiplication. In the addition, the rank per matrix block can double and must be recompressed accordingly. For the multiplication of hierarchical matrices with even the same block structure, matrix blocks of different sizes need to be combined.
 
 ### References:
@@ -160,7 +154,7 @@ Hierarchical matrices are special matrices $\mathcal{H}\in \mathbb{R}^{n\times n
 * S. Börm, L. Grasedyck, W. Hackbusch. Hierarchical Matrices.
 * W. Hackbusch. A sparse matrix arithmetic based on on H-Matrices. Part I: Introduction to H-Matrices.
 
-## 18. Fast Fourier Transform (Supervisor: Sara)
+## 17. Fast Fourier Transform (Supervisor: Sara)
 Convolution is commonly used in computer vision as a shift equivariant operator. The convolution ${w}\star{v}$ can be computed either as the multiplication of the circulant matrix derived from the weight vector ${w}$ and the signal vector ${v}$, or in the Fourier basis by first computing the element-wise product of their Fourier transforms, and then coming back to the original coordinates via the inverse Fourier transform. The fast Fourier transform (FFT) was invented to bring down the cost to $O(n\log(n))$. 
 This cost reduction enabled modern signal processing and is the foundation of the mp3 audio format.
 The algorithm was reinvented by J. W. Cooley and J. Tukey independently 160 years later than the first discovery by Carl Friedrich Gauss.
@@ -170,7 +164,7 @@ The algorithm was reinvented by J. W. Cooley and J. Tukey independently 160 year
 * J. W. Cooley and J. Tukey. An algorithm for the machine calculation of complex Fourier series.
 * M. Bronstein. Deriving convolution from first principles.
 
-## 19. Fast Wavelet Transform (Supervisor: Sara)
+## 18. Fast Wavelet Transform (Supervisor: Sara)
 Similar to the fast Fourier transform, the fast wavelet transform (FWT) computes a change of basis into a wavelet basis. Different from 
 the fast Fourier transform, the FWT can be performed in linear cost with respect to the length of the signal.
 It is used in many fields, primarily for signal processing and, consequently, image analysis as a replacement for Fourier transform and discrete cosine transform, with a notable mention going to the work done in JPEG2K. The FWT can also be applied to decompose and filter images.
@@ -179,7 +173,7 @@ It is used in many fields, primarily for signal processing and, consequently, im
 
 * S. Mallat. A wavelet tour of signal processing.
 
-## 20. Sparse Grids (Supervisor: Sara)
+## 19. Sparse Grids (Supervisor: Sara)
 Suppose to achieve a required accuracy, we need to employ at least $N$ grid points in the one-dimensional space. With regular grid-based approaches, a straight forward extension to $d$ dimensions leads to $N^d$ grid points to reach the same accuracy. Therefore, regular grid-based methods exhibit the problem of the exponential dependence of dimensionality, i.e., the curse of dimensionality. For the approximation of certain classes of functions, sparse grids overcome the curse of dimensionality and lead to efficient representations.
 
 ### References:
@@ -187,7 +181,7 @@ Suppose to achieve a required accuracy, we need to employ at least $N$ grid poin
 * H. J. Bungartz and M. Griebel. Sparse grids.
 * https://sparsegrids.org
 
-## 21.  Tensor-trains (Supervisor: Davide)
+## 20.  Tensor-trains (Supervisor: Davide)
 A tensor is an array with dimensionality more than 2. Because of the curse of dimensionality, challenges are posed by the storage of high-dimensional tensors and the implementation of their arithmetic operations. The tensor-train decomposition is one possible solution, considered as an extension of low rank-approximation of matrices. In this method, one can unfold a tensor recursively by spliting indices into two parts at each step, and perform any low-rank approximation on the resulting 2D matrices. If the low rank $r$ is small, the storage will decrease from $O(n^d)$ to $O(dnr^2)$. The cost of the arithmetic operations reduces dramatically as well, e.g., addition and element-wise multiplication.
 
 ### References:
