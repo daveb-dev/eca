@@ -47,7 +47,7 @@ on the corresponding matrix factorization can be proven.
 Given two square $n\times n$ matrices, the naive method for computing the matrix multiplication has cost $O(n^3)$. However, it can
 be done in a better way using Strassen's algorithm which is a divide and conquer method and reuses intermediate products.
 As a consequence, the cost of the matrix factorization is reduced to approximately $O(n^{2.8})$. Based on this observation,
-there were ever since efforts to further reduce the cost of the matrix multiplication, a bound proven in 2020 is $O(n^2.37286)$
+there were ever since efforts to further reduce the cost of the matrix multiplication, a bound proven in 2020 is $O(n^{2.37286})$
 
 ### References:
 
