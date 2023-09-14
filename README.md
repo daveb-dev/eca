@@ -220,9 +220,9 @@ AMG leverages a hierarchical approach, where it constructs a hierarchy of finer 
 At the coarsest levels, AMG solves the linear system directly, which is computationally cheaper due to reduced problem size. AMG is known for its excellent scalability and robustness, making it well-suited for parallel computing environments and a wide range of problem types.
 
 ### References:
-* K. Stüben. Algebraic Multigrid, An Introduction with Applications. https://www.scai.fraunhofer.de/content/dam/scai/de/documents/AllgemeineDokumentensammlung/SchnelleLoeser/SAMG/AMG_Introduction.pdf
-* J. W. Ruge and K. Stüben. Algebraic Multigrid.
- https://epubs.siam.org/doi/10.1137/1.9781611971057.ch4 
+* [K. Stüben. Algebraic Multigrid, An Introduction with Applications](https://www.scai.fraunhofer.de/content/dam/scai/de/documents/AllgemeineDokumentensammlung/SchnelleLoeser/SAMG/AMG_Introduction.pdf)
+* [J. W. Ruge and K. Stüben. Algebraic Multigrid,  1987, 73-130](
+ https://epubs.siam.org/doi/10.1137/1.9781611971057.ch4)
 
 
 ## 23. Multilevel Monte Carlo method (Supervisor: Sara)
