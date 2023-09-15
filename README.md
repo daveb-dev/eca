@@ -208,7 +208,7 @@ $$ \mathop{\text{Prox}}_{\gamma F}(x) =  \mathop{\text{argmin}}_y \frac{1}{2} {\
 (the same definition applies also for $G$). 
 Several problems of image analysis can be cast into this framework. An example is the 
 denoising of an image $\mathbf{I}$ by minimizing the $L^1$ norm of the gradient of reconstructed image, and the $L^2$ norm of the original image. The problem then reads
-$$\min_{u}\int_\Omega||\nabla u||_2 dx+\frac\lambda2||u-\mathbf{I}||_2^2$$
+$$\min_{u}\int_\Omega {\lVert \nabla u \rVert} _2 dx+\frac\lambda2 {\lVert u-\mathbf{I} \rVert} _2^2$$
 where $L(u)=\nabla u$ and $F$ is the $L^1$ norm, and $G$ proportional to the $L^2$ distance between $u$ and $\mathbf{I}$.
 
 ### References:
