@@ -84,7 +84,7 @@ An elegant way is to use Inverse Transform Sampling to sample $X \sim F_X(x)$, w
 * <a href="https://stephens999.github.io/fiveMinuteStats/inverse_transform_sampling.html"> Easy blogpost </a>
 * Soon-to-be-found appropriate reference
 
-##7. Acceptance-Rejection Algorithm (Supervisor: Valentina)
+## 7. Acceptance-Rejection Algorithm (Supervisor: Valentina)
 As said above (see 7.), in a plethora of computational problems, there is a need to simulate from a given distribution. However, sometimes it is not possible to simulate directly from the target distribution $X \sim F_X(x)$, since it may have some undesirable properties (for example, it may have an uncomputable normalising constant, or its cumulative distribution $F_X(\cdot)$ may not be invertible). In this situation, we can propose observations from an "easier" distribution $G_X(x)$, and then accept them if they are suitable to represent the target distribution we are interested in. This is what Rejection sampling does.
 
 ### References:
