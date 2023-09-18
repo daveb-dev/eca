@@ -241,6 +241,33 @@ but lots of samples at the coarse level, we substaintially save in terms of the 
 * S. Heinrich. Multilevel Monte Carlo Methods
 * M. B. Giles. Multilevel Monte Carlo Path Simulation.
 
+## 23. Markov Chain Monte Carlo (Supervisor: Sara)
+Markov Chain Monte Carlo (MCMC) stands as a powerful and versatile method employed for the approximate generation of samples from arbitrary probability distributions. This is particularly invaluable when dealing with complex scenarios where the random vector X comprises dependent components. What sets MCMC apart is its ability to navigate these intricate landscapes without necessitating an exact expression of the target probability density function (pdf), often needing only the pdf up to a normalization constant. 
+In essence, MCMC constructs a Markov chain where each state represents a potential sample from the desired distribution. By iteratively proposing and accepting/rejecting new states based on their likelihood relative to the current state, the chain eventually converges to a stationary distribution that closely approximates the target distribution. This convergence ensures that the generated samples provide insights and estimates for various statistical and probabilistic analyses.
+MCMC's significance extends across diverse fields, enabling Bayesian inference in statistics, facilitating parameter estimation in machine learning, aiding in the simulation of physical systems, and contributing to risk assessment in finance, among many other applications.
+
+### References:
+
+* 
+* 
+
+
+## 24. Randomized Sketching (Supervisor: )
+If you want to multiply an $n \times d$ matrix $X$, with $n>>d$, on the left by an $m \times n$ matrix $\tilde G$ of i.i.d. Gaussian random variables, it is too slow. In The idea is to introduce a new randomized $m \times n$ matrix $T$, for which one can compute $T ⋅X$ in only $O(nnz(X)) + \tilde O(m^1.5 ⋅d^3)$ time, for which the total variation distance between the distributions $T ⋅X$ and $\tilde G ⋅X$ is as small as desired. Here $nnz(X)$ denotes the number of non-zero entries of $X$. Since the total variation distance is small, we can provably use $T ⋅X$ in place of $\tilde G ⋅X$ in any application.
+
+### References:
+
+* https://proceedings.mlr.press/v48/kapralov16.html
+* https://arxiv.org/abs/2210.11295
+
+
+## 25. Wavelet Packets (Supervisor: )
+Wavelet packets are a decomposition technique used in signal processing and data analysis, which extends the concept of wavelet transforms. They provide a more flexible and detailed representation of a signal by allowing for a broader range of frequency components to be analyzed. They find applications in various domains, including signal denoising, feature extraction from time-series data, image compression, audio processing, and more. 
+
+### References:
+
+* Di Khalil Ahmad, Abdullah. Wavelet Packets and Their Statistical Applications
+  
   
 ## Programming Languages for code
 
