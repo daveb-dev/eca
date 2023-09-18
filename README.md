@@ -91,7 +91,7 @@ As said above (see 7.), in a plethora of computational problems, there is a need
 * <a href="http://www.markirwin.net/stat221/Refs/flury90.pdf"> Bernard D. Flury; Acceptance-rejection sampling made easy (1990) </a>
 * Christian Robert, George Casella; Monte Carlo Statistical Methods (2013) - Chapter 2.3
 
-## 8. Gibbs Dampler (Supervisor: Valentina)
+## 8. Gibbs Sampler (Supervisor: Valentina)
 The world is not univariate: usually, to model real data, we need to resort to multivariate distributions, and consequently some inferencial techniques require to sample from them. For example, consider a multivariate, p-dimensional parameter $\theta = (\theta_1, \dots, \theta_p)$ and suppose it is necessary to sample from its $ p- $dimensional distribution $p(\theta)$. Then, the Gibbs sampler proposes to do that by iteratively sampling from the corresponding (univariate) conditional distributions $p(\theta_i | \theta_1, \dots, \theta_{i-1},\theta_{i+1}, \dots, \theta_p)$, for $i=1, \dots, p$.
 ### References:
 * <a href="http://www2.stat.duke.edu/~scs/Courses/Stat376/Papers/Basic/CasellaGeorge1992.pdf"> George Casella, Edward I. George; Explaining the Gibbs Sampler (1992) </a>
