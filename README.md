@@ -253,7 +253,7 @@ MCMC's significance extends across diverse fields, enabling Bayesian inference i
 
 
 ## 24. Randomized Sketching (Supervisor: )
-If you want to multiply an $n \times d$ matrix $X$, with $n>>d$, on the left by an $m \times n$ matrix $\tilde G$ of i.i.d. Gaussian random variables, it is too slow. In The idea is to introduce a new randomized $m \times n$ matrix $T$, for which one can compute $T ⋅X$ in only $O(nnz(X)) + \tilde O(m^1.5 ⋅d^3)$ time, for which the total variation distance between the distributions $T ⋅X$ and $\tilde G ⋅X$ is as small as desired. Here $nnz(X)$ denotes the number of non-zero entries of $X$. Since the total variation distance is small, we can provably use $T ⋅X$ in place of $\tilde G ⋅X$ in any application.
+If you want to multiply an $n \times d$ matrix $X$, with $n>>d$, on the left by an $m \times n$ matrix $\tilde G$ of i.i.d. Gaussian random variables, it is too slow. In The idea is to introduce a new randomized $m \times n$ matrix $T$, for which one can compute $T ⋅X$ in only $O(nnz(X)) + \tilde O(m^{1.5} ⋅d^3)$ time, for which the total variation distance between the distributions $T ⋅X$ and $\tilde G ⋅X$ is as small as desired. Here $nnz(X)$ denotes the number of non-zero entries of $X$. Since the total variation distance is small, we can provably use $T ⋅X$ in place of $\tilde G ⋅X$ in any application.
 
 ### References:
 
