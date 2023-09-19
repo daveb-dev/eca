@@ -134,7 +134,7 @@ It is used in many fields, primarily for signal processing and, consequently, im
 * S. Mallat. A wavelet tour of signal processing.
 
 
-## 11. Sparse Grids (Supervisor: Jacopo-Sara)
+## 11. Sparse Grids (Supervisor: Jacopo)
 Suppose to achieve a required accuracy, we need to employ at least $N$ grid points in the one-dimensional space. With regular grid-based approaches, a straight forward extension to $d$ dimensions leads to $N^d$ grid points to reach the same accuracy. Therefore, regular grid-based methods exhibit the problem of the exponential dependence of dimensionality, i.e., the curse of dimensionality. For the approximation of certain classes of functions, sparse grids overcome the curse of dimensionality and lead to efficient representations.
 
 ### References:
