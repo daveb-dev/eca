@@ -85,10 +85,26 @@ MCMC's significance extends across diverse fields, enabling Bayesian inference i
 
 * 
 * 
+## 12.  Algebraic Multigrid (Supervisor: Sara)
+Algebraic Multigrid (AMG) is a numerical technique for the solution of large, sparse linear systems. It is an iterative solver that operates on the matrix representation of the 
+linear system, typically without requiring knowledge of some underlying geometry.
+AMG leverages a hierarchical approach, where it constructs a hierarchy of finer grid levels, each of which represents a simplified version of the original problem.
+At the coarsest level, AMG solves the linear system directly, which is computationally cheaper due to reduced problem size. AMG is known for its excellent scalability and robustness, 
+making it well-suited for parallel computing environments and a wide range of problem types.
 
+### References:
+* [K. Stüben. Algebraic Multigrid, An Introduction with Applications](https://www.scai.fraunhofer.de/content/dam/scai/de/documents/AllgemeineDokumentensammlung/SchnelleLoeser/SAMG/AMG_Introduction.pdf)
+* [J. W. Ruge and K. Stüben. Algebraic Multigrid,  1987, 73-130](
+ https://epubs.siam.org/doi/10.1137/1.9781611971057.ch4)
 ## 25. Wavelet Packets (Supervisor: )
 Wavelet packets are a decomposition technique used in signal processing and data analysis, which extends the concept of wavelet transforms. They provide a more flexible and detailed representation of a signal by allowing for a broader range of frequency components to be analyzed. They find applications in various domains, including signal denoising, feature extraction from time-series data, image compression, audio processing, and more. 
 
 ### References:
 
 * Di Khalil Ahmad, Abdullah. Wavelet Packets and Their Statistical Applications
+
+## 7. Randomized Low-rank Approximation (Supervisor: Sara)
+A very simple class of low-rank approximations of a matrix is obtained by using the product of the matrix and random vectors. A low-rank approximation can be obtained from the vectors in the image of the matrix. Since the main effort of these methods is dominated by matrix-vector multiplications, these algorithms are usually very fast for sparse matrices. In return, however, only pessimistic error estimates are avaliable, and the actual error is often much better.
+
+### References:
+* N. Halko, P. G. Martinsson, J. A. Tropp. Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions.
