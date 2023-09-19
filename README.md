@@ -76,8 +76,20 @@ The world is not univariate: usually, to model real data, we need to resort to m
 * <a href="http://www2.stat.duke.edu/~scs/Courses/Stat376/Papers/Basic/CasellaGeorge1992.pdf"> George Casella, Edward I. George; Explaining the Gibbs Sampler (1992) </a>
 * Christian Robert, George Casella; Monte Carlo Statistical Methods (2013) - Chapter 9
 
+## 6. Multilevel Monte Carlo method (Supervisor: Sara)
+The Monte Carlo is one of the most common approaches for approximating the expectation of a random variable $X(\omega)$.
+From the weak law of large numbers theorem, the required number of samples depends on the variance for a given accuracy to achieve.
+If the variance is small, the Monte Carlo method even with few samples can be of high accuracy.
+One of the classic methods for variance reduction involves a hierarchy of control variates and is called
+multilevel Monte Carlo method. By computing relatively few samples at the high level of the hierarchy,
+but lots of samples at the coarse level, we substaintially save in terms of the total computation.
 
-## 6. Krylov Subspace Iteration Methods (Supervisor: Michael)
+### References:
+
+* S. Heinrich. Multilevel Monte Carlo Methods
+* M. B. Giles. Multilevel Monte Carlo Path Simulation.
+
+## 7. Krylov Subspace Iteration Methods (Supervisor: Michael)
 Important methods for the numerical solution of eigenvalue problems and large systems of linear equations, such as the Lanczos or the CG method are based on the projection onto a Krylov subspace. Given a matrix $A\in\mathbb{R}^{n\times n}$ and a vector $v\in \mathbb{R}^n, n\in N$, the Krylov space is defined according to $\mathcal{K}_m(A,v):=\{v,Av,\cdots,A^{m-1}\boldsymbol{v}\}$. Of particular interest are the approximation properties of these subspaces and the relation between them.
 
 ### References:
@@ -92,7 +104,7 @@ Important methods for the numerical solution of eigenvalue problems and large sy
 
 
 
-## 7. Hierarchical Matrices (Supervisor: Michael)
+## 8. Hierarchical Matrices (Supervisor: Michael)
 Hierarchical matrices are special matrices $\mathcal{H}\in \mathbb{R}^{n\times n}$, which have blockwise low-rank $k \ll n$ with respect to a special tree-like partitioning $\tau$, the so-called "Block Cluster Tree". A special challenge is posed by the arithmetic of these matrices, for example the addition and multiplication. In the addition, the rank per matrix block can double and must be recompressed accordingly. For the multiplication of hierarchical matrices with even the same block structure, matrix blocks of different sizes need to be combined.
 
 ### References:
@@ -101,7 +113,7 @@ Hierarchical matrices are special matrices $\mathcal{H}\in \mathbb{R}^{n\times n
 * W. Hackbusch. A sparse matrix arithmetic based on on H-Matrices. Part I: Introduction to H-Matrices.
 
 
-## 8. Fast Fourier Transform (Supervisor: Sara)
+## 9. Fast Fourier Transform (Supervisor: Sara)
 Convolution is commonly used in computer vision as a shift equivariant operator. The convolution ${w}\star{v}$ can be computed either as the multiplication of the circulant matrix derived from the weight vector ${w}$ and the signal vector ${v}$, or in the Fourier basis by first computing the element-wise product of their Fourier transforms, and then coming back to the original coordinates via the inverse Fourier transform. The fast Fourier transform (FFT) was invented to bring down the cost to $O(n\log(n))$. 
 This cost reduction enabled modern signal processing and is the foundation of the mp3 audio format.
 The algorithm was reinvented by J. W. Cooley and J. Tukey independently 160 years later than the first discovery by Carl Friedrich Gauss.
@@ -112,7 +124,7 @@ The algorithm was reinvented by J. W. Cooley and J. Tukey independently 160 year
 * M. Bronstein. Deriving convolution from first principles.
 
 
-## 9. Fast Wavelet Transform (Supervisor: Sara)
+## 10. Fast Wavelet Transform (Supervisor: Sara)
 Similar to the fast Fourier transform, the fast wavelet transform (FWT) computes a change of basis into a wavelet basis. Different from 
 the fast Fourier transform, the FWT can be performed in linear cost with respect to the length of the signal.
 It is used in many fields, primarily for signal processing and, consequently, image analysis as a replacement for Fourier transform and discrete cosine transform, with a notable mention going to the work done in JPEG2K. The FWT can also be applied to decompose and filter images.
@@ -122,7 +134,7 @@ It is used in many fields, primarily for signal processing and, consequently, im
 * S. Mallat. A wavelet tour of signal processing.
 
 
-## 10. Sparse Grids (Supervisor: Jacopo-Sara)
+## 11. Sparse Grids (Supervisor: Jacopo-Sara)
 Suppose to achieve a required accuracy, we need to employ at least $N$ grid points in the one-dimensional space. With regular grid-based approaches, a straight forward extension to $d$ dimensions leads to $N^d$ grid points to reach the same accuracy. Therefore, regular grid-based methods exhibit the problem of the exponential dependence of dimensionality, i.e., the curse of dimensionality. For the approximation of certain classes of functions, sparse grids overcome the curse of dimensionality and lead to efficient representations.
 
 ### References:
@@ -131,7 +143,7 @@ Suppose to achieve a required accuracy, we need to employ at least $N$ grid poin
 * https://sparsegrids.org
 
 
-## 11.  Tensor-trains (Supervisor: Davide)
+## 12.  Tensor-trains (Supervisor: Davide)
 A tensor is an array with dimensionality more than 2. Because of the curse of dimensionality, challenges are posed by the storage of high-dimensional tensors and the implementation of their arithmetic operations. The tensor-train decomposition is one possible solution, considered as an extension of low rank-approximation of matrices. In this method, one can unfold a tensor recursively by spliting indices into two parts at each step, and perform any low-rank approximation on the resulting 2D matrices. If the low rank $r$ is small, the storage will decrease from $O(n^d)$ to $O(dnr^2)$. The cost of the arithmetic operations reduces dramatically as well, e.g., addition and element-wise multiplication.
 
 ### References:
@@ -146,21 +158,10 @@ A tensor is an array with dimensionality more than 2. Because of the curse of di
 
 
 
-## 12. Multilevel Monte Carlo method (Supervisor: Sara)
-The Monte Carlo is one of the most common approaches for approximating the expectation of a random variable $X(\omega)$.
-From the weak law of large numbers theorem, the required number of samples depends on the variance for a given accuracy to achieve.
-If the variance is small, the Monte Carlo method even with few samples can be of high accuracy.
-One of the classic methods for variance reduction involves a hierarchy of control variates and is called
-multilevel Monte Carlo method. By computing relatively few samples at the high level of the hierarchy,
-but lots of samples at the coarse level, we substaintially save in terms of the total computation.
-
-### References:
-
-* S. Heinrich. Multilevel Monte Carlo Methods
-* M. B. Giles. Multilevel Monte Carlo Path Simulation.
 
 
-## 13. Randomized Sketching (Supervisor: )
+
+## 13. Randomized Sketching (Supervisor:Sara )
 If you want to multiply an $n \times d$ matrix $X$, with $n>>d$, on the left by an $m \times n$ matrix $\tilde G$ of i.i.d. Gaussian random variables, it is too slow. The idea is to introduce a new randomized $m \times n$ matrix $T$, for which one can compute $T ⋅X$ in only $O(nnz(X)) + \tilde O(m^{1.5} ⋅d^3)$ time, for which the total variation distance between the distributions $T ⋅X$ and $\tilde G ⋅X$ is as small as desired. Here $nnz(X)$ denotes the number of non-zero entries of $X$. Since the total variation distance is small, we can provably use $T ⋅X$ in place of $\tilde G ⋅X$ in any application.
 
 ### References:
