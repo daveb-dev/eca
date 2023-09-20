@@ -64,7 +64,7 @@ Important methods for the numerical solution of eigenvalue problems and large sy
 * G. H. Golub and C. F. van Loan. Matrix Computation.
 
 
-## 5. Hierarchical Matrices (Supervisor: Michael)
+## 5. Hierarchical Matrices (Supervisor: Jacopo)
 Hierarchical matrices are special matrices $\mathcal{H}\in \mathbb{R}^{n\times n}$, which have blockwise low-rank $k \ll n$ with respect to a special tree-like partitioning $\tau$, the so-called "Block Cluster Tree". A special challenge is posed by the arithmetic of these matrices, for example the addition and multiplication. In the addition, the rank per matrix block can double and must be recompressed accordingly. For the multiplication of hierarchical matrices with even the same block structure, matrix blocks of different sizes need to be combined.
 
 ### References:
@@ -120,7 +120,7 @@ If you want to multiply an $n \times d$ matrix $X$, with $n>>d$, on the left by 
 * https://arxiv.org/abs/2210.11295
 
 
-## 11. Multilevel Monte Carlo method (Supervisor: Sara)
+## 11. Multilevel Monte Carlo method (Supervisor: Michael)
 The Monte Carlo is one of the most common approaches for approximating the expectation of a random variable $X(\omega)$.
 From the weak law of large numbers theorem, the required number of samples depends on the variance for a given accuracy to achieve.
 If the variance is small, the Monte Carlo method even with few samples can be of high accuracy.
