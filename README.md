@@ -1,5 +1,5 @@
 # MCS: Efficient Computational Algorithms SA 2023-2024
-Michael Multerer, Davide Baroli, Valentina Ghidini and Sara Avesani, Jacopo Quizi.
+Michael Multerer, Davide Baroli, Valentina Ghidini, Sara Avesani, Jacopo Quizi.
 
 ##
 General References:
@@ -18,7 +18,7 @@ https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=17639&punumber=5992).
 
 
 
-## 1. Spectral Clustering (Supervisor: Sara)
+## 1. Spectral Clustering (Supervisor: Davide)
 Graph partitioning is heavily used in domain decomposition and social community detection. If the considered graph is embedded into
 a coordinate system, there exist simpler methods, for example recursive coordinate bisection and inertial partitioning. However, these
 methods totally fail for hypergraphs. This is where the spectral clustering method comes in, which also work for general graphs
@@ -43,7 +43,7 @@ on the corresponding matrix factorization can be proven.
 
 * A. George. Nested Dissection of a Regular Finite Element Mesh.
 
-## 3. Strassen Algorithm (Supervisor: Sara)
+## 3. Strassen Algorithm (Supervisor: Davide)
 Given two square $n\times n$ matrices, the naive method for computing the matrix multiplication has cost $O(n^3)$. However, it can
 be done in a better way using Strassen's algorithm which is a divide and conquer method and reuses intermediate products.
 As a consequence, the cost of the matrix factorization is reduced to approximately $O(n^{2.8})$. Based on this observation,
