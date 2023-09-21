@@ -53,7 +53,7 @@ there were ever since efforts to further reduce the cost of the matrix multiplic
 
 * V. Strassen. Gaussian Elimination is not Optimal.
 * J. Alman and V. V. Williams. A Refined Laser Method and Faster Matrix Multiplication.
-
+* [GPU reload](https://dl.acm.org/doi/fullHtml/10.1145/3372419)
 
 
 ## 4. Krylov Subspace Iteration Methods (Supervisor: Michael)
