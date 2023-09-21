@@ -1,0 +1,34 @@
+# This is a basic workflow to help you get started with Actions
+
+name: latexConversion
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "exam/2024" ]
+  pull_request:
+    branches: [ "exam/2024" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: create file list
+        id: files_list
+        run: |
+          mkdir output  # create output dir
+          # this will also include README.md
+          echo "::set-output name=files::$(printf '"%s" ' *.md)"
+      - uses: docker://pandoc/latex:2.9
+        with:
+          args: --pdf-engine=xelatex --output=output/result.pdf ${{ steps.files_list.outputs.files }}
+      - uses: actions/upload-artifact@master
+        with:
+          name: output
+          path: output
